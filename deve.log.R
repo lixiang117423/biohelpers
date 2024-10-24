@@ -13,7 +13,7 @@ usethis::use_build_ignore("biohelpers.Rproj")
 
 # add function PCAinALL
 # usethis::use_r("PCAinALL")
-usethis::rename_files("PCAinALL.R", "pca_in_all.R")
+usethis::rename_files("pca_in_all.R", "pca_in_one.R")
 styler::style_file("R/pca_in_all.R")
 # usethis::use_package("FactoMineR")
 devtools::document()
@@ -32,6 +32,18 @@ usethis::use_import_from("dplyr", "select")
 usethis::use_import_from("base", "as.data.frame")
 # usethis::use_import_from("dpl")
 
+# 添加引用
+usethis::use_citation()
+
+# 添加github链接和bug提交链接
+usethis::use_github_links()
+
+# 添加示例数据,直接存储为.rda格式
+test_data = iris
+usethis::use_data(test_data)
+
 # check
 devtools::load_all()
 devtools::check()
+
+
