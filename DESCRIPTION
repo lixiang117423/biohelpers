@@ -4,8 +4,7 @@ Title: Convenience Functions for Biological Data Processing
 Version: 0.0.0.1
 Author: Xiang LI
 Maintainer: Xiang LI <lixiang117423@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Convenience Functions for Biological Data Processing.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
