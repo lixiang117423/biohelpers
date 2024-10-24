@@ -32,6 +32,9 @@ usethis::use_import_from("dplyr", "select")
 usethis::use_import_from("base", "as.data.frame")
 # usethis::use_import_from("dpl")
 
+# 格式化DESCIPTION
+usethis::use_tidy_description()
+
 # 添加引用
 usethis::use_citation()
 
@@ -41,6 +44,12 @@ usethis::use_github_links()
 # 添加示例数据,直接存储为.rda格式
 test_data = iris
 usethis::use_data(test_data)
+
+# 修改版本
+usethis::use_version("major") # 第一位数字
+usethis::use_version("minor") # 第二位数字
+usethis::use_version("patch") # 第三位数字
+usethis::use_version("dev") # 第四位数字
 
 # check
 devtools::load_all()
