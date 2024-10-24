@@ -1,6 +1,14 @@
 # add MIT license
 usethis::use_mit_license()
 
+# add .Rbuildignore
+usethis::use_build_ignore("README.md")
+usethis::use_build_ignore("deve.log.R")
+usethis::use_build_ignore("LICENSE")
+usethis::use_build_ignore("LICENSE.md")
+usethis::use_build_ignore("biohelpers.Rproj")
+
+
 # check
 devtools::check()
 
