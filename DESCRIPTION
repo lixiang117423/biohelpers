@@ -1,19 +1,20 @@
-Package: biohelpers
 Type: Package
+Package: biohelpers
 Title: Convenience Functions for Biological Data Processing
-Version: 0.0.0.1
-Authors@R: person("Xiang", "LI", email = "lixiang117423@gmail.com", role = c("aut", "cre"))
+Version: 0.0.0.2
+Authors@R: 
+    person("Xiang", "LI", , "lixiang117423@gmail.com", role = c("aut", "cre"))
 Description: Convenience Functions for Biological Data Processing.
+License: MIT + file LICENSE
 URL: https://github.com/lixiang117423/biohelpers
 BugReports: https://github.com/lixiang117423/biohelpers/issues
-License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+Depends: 
+    R (>= 2.10)
 Imports: 
     base,
     dplyr,
     factoextra,
     FactoMineR
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 7.3.2
-Depends: 
-    R (>= 2.10)
