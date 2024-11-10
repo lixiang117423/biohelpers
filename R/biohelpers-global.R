@@ -22,5 +22,10 @@ utils::globalVariables(c(
   "result.lm",
   "anova",
   "model",
-  "R2"
+  "R2",
+  # plot_theme
+  "base_size",
+  "base_family",
+  "mytheme"
+
 ))

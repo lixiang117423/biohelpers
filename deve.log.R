@@ -25,13 +25,14 @@ usethis::use_build_ignore("biohelpers.Rproj")
 usethis::use_build_ignore("R/process_data.R") # 编译时忽略这个脚本
 
 # 添加全局变量，所有的全局变量全部添加在这个脚本里面
-file.create("R/biohelpers-global.R")
+# file.create("R/biohelpers-global.R")
 
 # 添加函数,添加一次即可，避免覆盖
 # file.create("R/pca_in_one.R")
 # file.create("R/cor_and_plot.R")
 # file.create("R/lm_and_plot.R")
 # file.create("R/find_outliner.R")
+# file.create("R/plot_theme.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -67,6 +68,14 @@ usethis::use_import_from("stats", "anova")
 usethis::use_import_from("rlang", "sym")
 usethis::use_import_from("stats", "quantile")
 usethis::use_import_from("stats", "IQR")
+usethis::use_import_from("ggthemes", "theme_foundation")
+usethis::use_import_from("ggplot2", "theme")
+usethis::use_import_from("ggplot2", "element_line")
+usethis::use_import_from("ggplot2", "element_rect")
+usethis::use_import_from("ggplot2", "element_text")
+usethis::use_import_from("ggplot2", "element_blank")
+usethis::use_import_from("ggplot2", "unit")
+usethis::use_import_from("ggplot2", "rel")
 
 
 
@@ -74,13 +83,15 @@ usethis::use_import_from("stats", "IQR")
 # styler::style_file("R/pca_in_one.R")
 # styler::style_file("R/cor_and_plot.R")
 # styler::style_file("R/lm_and_plot.R")
-styler::style_file("R/find_outliner.R")
+# styler::style_file("R/find_outliner.R")
+styler::style_file("R/plot_theme.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
 # usethis::use_vignette(name = "cor_and_plot")
 # usethis::use_vignette(name = "lm_and_plot")
 # usethis::use_vignette(name = "ind_outliner")
+# usethis::use_vignette(name = "plot_theme")
 
 devtools::build_vignettes()
 
