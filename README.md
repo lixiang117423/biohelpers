@@ -11,9 +11,9 @@ devtools::install_github("lixiang117423/biohelpers")
 
 ## Frequently Used Functions
 
-- Principal Component Analysis（PCA）
-- Correlation Calculation
-- Linear Regression and Plotting
+- [Principal Component Analysis（PCA）](https://lixiang117423.github.io/biohelpers/articles/pca_in_one.html)
+- [Correlation Calculation](https://lixiang117423.github.io/biohelpers/articles/cor_and_plot.html)
+- [Linear Regression and Plotting](https://lixiang117423.github.io/biohelpers/articles/lm_and_plot.html)
 
 ## RNA-Seq
 
