@@ -20,6 +20,7 @@ usethis::use_github_links()
 # 将编译时用不到的文件添加到.Rbuildignore这个文件夹中，不会改变文件位置，只是在编译时忽略这些文件
 usethis::use_build_ignore("README.md")
 usethis::use_build_ignore("deve.log.R")
+usethis::use_build_ignore("test_function.R")
 usethis::use_build_ignore("biohelpers.Rproj")
 usethis::use_build_ignore("R/process_data.R") # 编译时忽略这个脚本
 
@@ -30,6 +31,7 @@ file.create("R/biohelpers-global.R")
 # file.create("R/pca_in_one.R")
 # file.create("R/cor_and_plot.R")
 # file.create("R/lm_and_plot.R")
+# file.create("R/find_outliner.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -63,17 +65,23 @@ usethis::use_import_from("ggplot2", "geom_point")
 usethis::use_import_from("ggplot2", "geom_smooth")
 usethis::use_import_from("stats", "anova")
 usethis::use_import_from("rlang", "sym")
+usethis::use_import_from("stats", "quantile")
+usethis::use_import_from("stats", "IQR")
+
 
 
 # 将某些文件格式化为tidyverse风格
 # styler::style_file("R/pca_in_one.R")
 # styler::style_file("R/cor_and_plot.R")
-styler::style_file("R/lm_and_plot.R")
+# styler::style_file("R/lm_and_plot.R")
+styler::style_file("R/find_outliner.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
 # usethis::use_vignette(name = "cor_and_plot")
 # usethis::use_vignette(name = "lm_and_plot")
+# usethis::use_vignette(name = "ind_outliner")
+
 devtools::build_vignettes()
 
 # 检查
@@ -84,8 +92,8 @@ usethis::use_tidy_description()
 devtools::check()
 
 # 编译R包并安装
-devtools::build()
-devtools::check_built("../biohelpers_0.0.0.5.tar.gz")
+# devtools::build()
+# devtools::check_built("../biohelpers_0.0.0.5.tar.gz")
 # file.rename("../biohelpers_0.0.0.5.tar.gz", "./biohelpers_0.0.0.5.tar.gz")
 devtools::install_local()
 # usethis::use_github_release(publish = TRUE)
