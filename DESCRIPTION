@@ -1,0 +1,34 @@
+Type: Package
+Package: biohelpers
+Title: Convenience Functions for Biological Data Processing
+Version: 0.0.0.5
+Authors@R: 
+    person("Xiang", "LI", , "lixiang117423@gmail.com", role = c("aut", "cre"))
+Description: Convenience Functions for Biological Data Processing.
+License: MIT + file LICENSE
+URL: https://github.com/lixiang117423/biohelpers,
+    https://lixiang117423.github.io/biohelpers/
+BugReports: https://github.com/lixiang117423/biohelpers/issues
+Depends: 
+    R (>= 2.10)
+Imports: 
+    dplyr,
+    factoextra,
+    FactoMineR,
+    ggplot2,
+    magrittr,
+    purrr,
+    rlang,
+    stats,
+    stringr,
+    tibble,
+    tidyr,
+    WGCNA
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2

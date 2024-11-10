@@ -1,0 +1,11 @@
+^LICENSE\.md$
+^README\.md$
+^deve\.log\.R$
+^biohelpers\.Rproj$
+^R/process_data\.R$
+^doc$
+^Meta$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
