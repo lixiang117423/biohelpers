@@ -23,6 +23,8 @@ usethis::use_build_ignore("deve.log.R")
 usethis::use_build_ignore("test_function.R")
 usethis::use_build_ignore("biohelpers.Rproj")
 usethis::use_build_ignore("R/process_data.R") # 编译时忽略这个脚本
+usethis::use_git_ignore("raw.data/")
+usethis::use_build_ignore("raw.data/")
 
 # 添加全局变量，所有的全局变量全部添加在这个脚本里面
 # file.create("R/biohelpers-global.R")
@@ -33,6 +35,7 @@ usethis::use_build_ignore("R/process_data.R") # 编译时忽略这个脚本
 # file.create("R/lm_and_plot.R")
 # file.create("R/find_outliner.R")
 # file.create("R/plot_theme.R")
+# file.create("R/reorder2heatmap.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -76,15 +79,21 @@ usethis::use_import_from("ggplot2", "element_text")
 usethis::use_import_from("ggplot2", "element_blank")
 usethis::use_import_from("ggplot2", "unit")
 usethis::use_import_from("ggplot2", "rel")
-
-
+usethis::use_import_from("dplyr","slice_max")
+usethis::use_import_from("dplyr","rename")
+usethis::use_import_from("dplyr","count")
+usethis::use_import_from("dplyr","arrange")
+usethis::use_import_from("dplyr","inner_join")
+usethis::use_import_from("dplyr","n")
+usethis::use_import_from("stats", "reorder")
 
 # 将某些文件格式化为tidyverse风格
 # styler::style_file("R/pca_in_one.R")
 # styler::style_file("R/cor_and_plot.R")
 # styler::style_file("R/lm_and_plot.R")
 # styler::style_file("R/find_outliner.R")
-styler::style_file("R/plot_theme.R")
+# styler::style_file("R/plot_theme.R")
+styler::style_file("R/reorder2heatmap.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
@@ -92,8 +101,9 @@ styler::style_file("R/plot_theme.R")
 # usethis::use_vignette(name = "lm_and_plot")
 # usethis::use_vignette(name = "ind_outliner")
 # usethis::use_vignette(name = "plot_theme")
+# usethis::use_vignette(name = "reorder2heatmap")
 
-devtools::build_vignettes()
+# devtools::build_vignettes()
 
 # 检查
 # file.remove("./NAMESPACE")

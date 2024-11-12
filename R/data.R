@@ -12,4 +12,16 @@
 #' @source <https://archive.ics.uci.edu/dataset/53/iris>
 "test_data"
 
+#' Test data.
+#'
+#' @format ## `df.reorder2heatmap`
+#' A data frame with 4,270 rows and 3 columns:
+#' \describe{
+#'   \item{sample}{sample code}
+#'   \item{meta}{metabolite name}
+#'   \item{value}{metabolite abundance}
+#' }
+#' @source Xiang Li
+"df.reorder2heatmap"
+
 

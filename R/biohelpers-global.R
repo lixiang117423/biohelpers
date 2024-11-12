@@ -26,6 +26,17 @@ utils::globalVariables(c(
   # plot_theme
   "base_size",
   "base_family",
-  "mytheme"
+  "mytheme",
+  # reorder2heatmap
+  "my_data_peak_values",
+  "number_of_peaks",
+  "my_data_peak_values_reordered",
+  "my_data_reordered",
+  "peaked_at",
+  "reorder",
+  "order_rows",
+  "n",
+  "data"
+
 
 ))

@@ -10,3 +10,5 @@
 ^pkgdown$
 ^\.github$
 ^test_function\.R$
+^\.Rproj\.user$
+^raw\.data$
