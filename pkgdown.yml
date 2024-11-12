@@ -7,7 +7,8 @@ articles:
   lm_and_plot: lm_and_plot.html
   pca_in_one: pca_in_one.html
   plot_theme: plot_theme.html
-last_built: 2024-11-10T07:19Z
+  reorder2heatmap: reorder2heatmap.html
+last_built: 2024-11-12T01:05Z
 urls:
   reference: https://lixiang117423.github.io/biohelpers/reference
   article: https://lixiang117423.github.io/biohelpers/articles
