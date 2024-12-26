@@ -24,4 +24,27 @@
 #' @source Xiang Li
 "df.reorder2heatmap"
 
+#' Test data.
+#'
+#' @format ## `df.gene.rnaseq`
+#' A data frame with 57,359 rows and 6 columns:
+#' \describe{
+#'   \item{SRR12580270}{sample name}
+#'   \item{SRR12580269}{sample name}
+#'   \item{SRR12580268}{sample name}
+#'   \item{SRR12580258}{sample name}
+#'   \item{SRR12580257}{sample name}
+#'   \item{SRR12580256}{sample name}
+#' }
+#' @source Xiang Li
+"df.gene.rnaseq"
 
+#' Test data.
+#'
+#' @format ## `df.sample.rnaseq`
+#' A data frame with 6 rows and 1 columns:
+#' \describe{
+#'   \item{group}{sample group}
+#' }
+#' @source Xiang Li
+"df.sample.rnaseq"

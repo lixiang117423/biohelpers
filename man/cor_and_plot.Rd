@@ -8,7 +8,7 @@ cor_and_plot(
   data.1,
   data.2 = NULL,
   method = "pearson",
-  cor = 0.05,
+  cor = 0.6,
   pvalue = 0.05
 )
 }

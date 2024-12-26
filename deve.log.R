@@ -37,6 +37,7 @@ usethis::use_build_ignore("raw.data/")
 # file.create("R/plot_theme.R")
 # file.create("R/reorder2heatmap.R")
 # file.create("R/show_minor_tricks.R")
+# file.create("R/call_DEGs_DESeq2.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -89,6 +90,12 @@ usethis::use_import_from("dplyr","n")
 usethis::use_import_from("stats", "reorder")
 usethis::use_import_from("ggprism", "guide_prism_offset_minor")
 usethis::use_import_from("ggplot2", "guides")
+usethis::use_import_from("DESeq2", "DESeqDataSetFromMatrix")
+usethis::use_import_from("DESeq2", "DESeq")
+usethis::use_import_from("DESeq2", "results")
+usethis::use_import_from("tibble", "rownames_to_column")
+
+
 
 # 将某些文件格式化为tidyverse风格
 # styler::style_file("R/pca_in_one.R")
@@ -97,6 +104,7 @@ usethis::use_import_from("ggplot2", "guides")
 # styler::style_file("R/find_outliner.R")
 # styler::style_file("R/plot_theme.R")
 # styler::style_file("R/reorder2heatmap.R")
+styler::style_file("R/call_DEGs_DESeq2.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
@@ -109,7 +117,7 @@ usethis::use_import_from("ggplot2", "guides")
 # devtools::build_vignettes()
 
 # 检查
-# file.remove("./NAMESPACE")
+file.remove("./NAMESPACE")
 devtools::load_all()
 devtools::document()
 usethis::use_tidy_description()

@@ -36,7 +36,12 @@ utils::globalVariables(c(
   "reorder",
   "order_rows",
   "n",
-  "data"
+  "data",
+
+  # call_DEGs_DESeq2
+  "log2FoldChange",
+  "padj",
+  "degs"
 
 
 ))

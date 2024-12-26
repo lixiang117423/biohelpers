@@ -2,6 +2,9 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom DESeq2 DESeq
+#' @importFrom DESeq2 DESeqDataSetFromMatrix
+#' @importFrom DESeq2 results
 #' @importFrom dplyr %>%
 #' @importFrom dplyr arrange
 #' @importFrom dplyr count
