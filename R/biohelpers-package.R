@@ -33,6 +33,7 @@
 #' @importFrom ggplot2 theme
 #' @importFrom ggplot2 unit
 #' @importFrom ggprism guide_prism_offset_minor
+#' @importFrom ggsci scale_color_d3
 #' @importFrom ggthemes theme_foundation
 #' @importFrom magrittr set_names
 #' @importFrom purrr map

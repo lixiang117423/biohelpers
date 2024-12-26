@@ -1,7 +1,7 @@
 # biohelpers
 Convenience Functions for Biological Data Processing.
 
-[点击访问中文版使用说明]([R 包 biohelpers 使用说明 - 小蓝哥的知识荒原](https://lixiang117423.github.io/article/biohelpers/))
+[点击访问中文版使用说明](https://lixiang117423.github.io/article/biohelpers/))
 
 ## Installation
 

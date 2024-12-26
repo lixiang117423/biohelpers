@@ -42,6 +42,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/call_DEGs_DESeq2.R")
 # file.create("R/enrich_GO.R")
 # file.create("R/enrich_KEGG.R")
+# file.create("R/plot_volcano.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -100,6 +101,9 @@ usethis::use_import_from("DESeq2", "results")
 usethis::use_import_from("tibble", "rownames_to_column")
 usethis::use_import_from("stringr", "str_split")
 usethis::use_import_from("clusterProfiler", "enricher")
+usethis::use_import_from("ggplot2", "geom_hline")
+usethis::use_import_from("ggplot2", "geom_vline")
+usethis::use_import_from("ggsci", "scale_color_d3")
 
 
 
@@ -113,6 +117,7 @@ usethis::use_import_from("clusterProfiler", "enricher")
 # styler::style_file("R/call_DEGs_DESeq2.R")
 # styler::style_file("R/enrich_GO.R")
 # styler::style_file("R/enrich_KEGG.R")
+styler::style_file("R/plot_volcano.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
