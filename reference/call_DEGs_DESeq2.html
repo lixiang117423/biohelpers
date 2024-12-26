@@ -93,10 +93,10 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     intersect, setdiff, setequal, union</span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lixiang117423/biohelpers" class="external-link">biohelpers</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">df.gene.rnaseq</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">df.sample.rnaseq</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">call_DEGs_DESeq2</span><span class="op">(</span>data <span class="op">=</span> <span class="va">df.gene.rnaseq</span>, </span></span>
-<span class="r-in"><span>                 sample <span class="op">=</span> <span class="va">df.sample.rnaseq</span>, </span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">df.rnaseq.gene</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">df.rnaseq.sample</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">call_DEGs_DESeq2</span><span class="op">(</span>data <span class="op">=</span> <span class="va">df.rnaseq.gene</span>, </span></span>
+<span class="r-in"><span>                 sample <span class="op">=</span> <span class="va">df.rnaseq.sample</span>, </span></span>
 <span class="r-in"><span>                 group <span class="op">=</span> <span class="st">"group"</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">degs</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> converting counts to integer mode</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> estimating size factors</span>
