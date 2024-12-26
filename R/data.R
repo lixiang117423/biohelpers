@@ -71,3 +71,15 @@
 #' }
 #' @source Xiang Li
 "df.rnaseq.degs"
+
+#' Test data.
+#'
+#' @format ## `df.rnaseq.kegg`
+#' A data frame with 6 rows and 1 columns:
+#' \describe{
+#'   \item{gene}{gene name}
+#'   \item{kegg.id}{KEGG term id}
+#'   \item{kegg.term}{KEGG term name}
+#' }
+#' @source Xiang Li
+"df.rnaseq.kegg"

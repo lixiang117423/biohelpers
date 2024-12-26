@@ -3,6 +3,7 @@
 export(call_DEGs_DESeq2)
 export(cor_and_plot)
 export(enrich_GO)
+export(enrich_KEGG)
 export(find_outliner)
 export(lm_and_plot)
 export(pca_in_one)

@@ -54,3 +54,10 @@ df.rnaseq.go %>%
   dplyr::sample_n(500, replace = FALSE) -> df.rnaseq.degs
 
 usethis::use_data(df.rnaseq.degs, overwrite = TRUE)
+
+# enrich_KEGG
+readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/99.其他项目/GOandKEGG/kegg.20220727.xlsx") %>% 
+  dplyr::select(geneid, keggid, description) %>% 
+  magrittr::set_names(c("gene", "kegg.id", "kegg.term")) -> df.rnaseq.kegg
+
+usethis::use_data(df.rnaseq.kegg, overwrite = TRUE)
