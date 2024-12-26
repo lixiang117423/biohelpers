@@ -14,10 +14,10 @@
 #' library(dplyr)
 #' library(biohelpers)
 #' 
-#' data(df.gene.rnaseq)
-#' data(df.sample.rnaseq)
-#' call_DEGs_DESeq2(data = df.gene.rnaseq, 
-#'                  sample = df.sample.rnaseq, 
+#' data(df.rnaseq.gene)
+#' data(df.rnaseq.sample)
+#' call_DEGs_DESeq2(data = df.rnaseq.gene, 
+#'                  sample = df.rnaseq.sample, 
 #'                  group = "group") -> degs
 #'
 call_DEGs_DESeq2 <- function(data, sample, group, log2FoldChange = 1, padj = 0.05) {

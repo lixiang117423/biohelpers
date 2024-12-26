@@ -41,7 +41,12 @@ utils::globalVariables(c(
   # call_DEGs_DESeq2
   "log2FoldChange",
   "padj",
-  "degs"
+  "degs",
 
-
+  # enrich_GO
+  "go.id",
+  "go.term",
+  "go.rich",
+  "df.term2gene",
+  "df.term2name"
 ))

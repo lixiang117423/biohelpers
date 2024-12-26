@@ -25,6 +25,8 @@ usethis::use_build_ignore("biohelpers.Rproj")
 usethis::use_build_ignore("R/process_data.R") # 编译时忽略这个脚本
 usethis::use_git_ignore("raw.data/")
 usethis::use_build_ignore("raw.data/")
+usethis::use_build_ignore("R/process_data.R")  
+usethis::use_git_ignore("R/process_data.R")
 
 # 添加全局变量，所有的全局变量全部添加在这个脚本里面
 # file.create("R/biohelpers-global.R")
@@ -38,6 +40,8 @@ usethis::use_build_ignore("raw.data/")
 # file.create("R/reorder2heatmap.R")
 # file.create("R/show_minor_tricks.R")
 # file.create("R/call_DEGs_DESeq2.R")
+# file.create("R/enrich_GO.R")
+file.create("R/enrich_KEGG.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -94,6 +98,8 @@ usethis::use_import_from("DESeq2", "DESeqDataSetFromMatrix")
 usethis::use_import_from("DESeq2", "DESeq")
 usethis::use_import_from("DESeq2", "results")
 usethis::use_import_from("tibble", "rownames_to_column")
+usethis::use_import_from("stringr", "str_split")
+usethis::use_import_from("clusterProfiler", "enricher")
 
 
 
@@ -104,7 +110,8 @@ usethis::use_import_from("tibble", "rownames_to_column")
 # styler::style_file("R/find_outliner.R")
 # styler::style_file("R/plot_theme.R")
 # styler::style_file("R/reorder2heatmap.R")
-styler::style_file("R/call_DEGs_DESeq2.R")
+# styler::style_file("R/call_DEGs_DESeq2.R")
+styler::style_file("R/enrich_GO.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
@@ -132,4 +139,4 @@ devtools::install_local(force = TRUE)
 
 # pkgdown添加网页,后续推送会自动更新
 # usethis::use_pkgdown_github_pages()
-pkgdown::build_site(new_process = FALSE)
+# pkgdown::build_site(new_process = FALSE)

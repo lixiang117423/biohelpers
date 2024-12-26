@@ -26,7 +26,7 @@
 
 #' Test data.
 #'
-#' @format ## `df.gene.rnaseq`
+#' @format ## `df.rnaseq.gene`
 #' A data frame with 57,359 rows and 6 columns:
 #' \describe{
 #'   \item{SRR12580270}{sample name}
@@ -37,14 +37,37 @@
 #'   \item{SRR12580256}{sample name}
 #' }
 #' @source Xiang Li
-"df.gene.rnaseq"
+"df.rnaseq.gene"
 
 #' Test data.
 #'
-#' @format ## `df.sample.rnaseq`
+#' @format ## `df.rnaseq.sample`
 #' A data frame with 6 rows and 1 columns:
 #' \describe{
 #'   \item{group}{sample group}
 #' }
 #' @source Xiang Li
-"df.sample.rnaseq"
+"df.rnaseq.sample"
+
+#' Test data.
+#'
+#' @format ## `df.rnaseq.go`
+#' A data frame with 6 rows and 1 columns:
+#' \describe{
+#'   \item{gene}{gene name}
+#'   \item{go.id}{GO term id}
+#'   \item{go.term}{GP term name}
+#'   \item{go.ontology}{GP term  ontology}
+#' }
+#' @source Xiang Li
+"df.rnaseq.go"
+
+#' Test data.
+#'
+#' @format ## `df.rnaseq.degs`
+#' A data frame with 6 rows and 1 columns:
+#' \describe{
+#'   \item{gene}{gene name}
+#' }
+#' @source Xiang Li
+"df.rnaseq.degs"

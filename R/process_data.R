@@ -22,7 +22,7 @@ df.sample %>%
   dplyr::select(Run, Treatment.minor) %>% 
   magrittr::set_names(c("sample", "group")) %>% 
   dplyr::mutate(group = factor(group, level = c("CK","Guy11"))) %>% 
-  tibble::column_to_rownames(var = "sample") -> df.sample.rnaseq
+  tibble::column_to_rownames(var = "sample") -> df.rnaseq.sample
 
 all.expre %>% 
   dplyr::select(gene, FPKM, Run) %>% 
@@ -33,7 +33,24 @@ all.expre %>%
   dplyr::select(-tmp) %>% 
   tidyr::pivot_wider(names_from = Run, values_from = FPKM) %>% 
   tibble::column_to_rownames(var = "gene") %>% 
-  dplyr::select(rownames(df.sample.rnaseq))-> df.gene.rnaseq
+  dplyr::select(rownames(df.rnaseq.sample))-> df.rnaseq.gene
 
-usethis::use_data(df.gene.rnaseq, overwrite = TRUE)
-usethis::use_data(df.sample.rnaseq, overwrite = TRUE)
+usethis::use_data(df.rnaseq.gene, overwrite = TRUE)
+usethis::use_data(df.rnaseq.sample, overwrite = TRUE)
+
+# enrich_GO
+load("D:/OneDrive/NAS/科研相关/PhData/data/02.元阳梯田/1569转录+代谢+激素文章/data/acuce.go.RData")
+
+df.go %>% 
+  dplyr::select(1,3:5) %>% 
+  magrittr::set_names(c("gene", "go.id", "go.term", "go.ontology")) -> df.rnaseq.go
+
+usethis::use_data(df.rnaseq.go, overwrite = TRUE)
+
+# 随机选择500个基因作为差异表达基因
+set.seed(123)
+df.rnaseq.go %>% 
+  dplyr::select(gene) %>% 
+  dplyr::sample_n(500, replace = FALSE) -> df.rnaseq.degs
+
+usethis::use_data(df.rnaseq.degs, overwrite = TRUE)

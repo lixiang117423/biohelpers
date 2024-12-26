@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom clusterProfiler enricher
 #' @importFrom DESeq2 DESeq
 #' @importFrom DESeq2 DESeqDataSetFromMatrix
 #' @importFrom DESeq2 results
@@ -42,6 +43,7 @@
 #' @importFrom stats quantile
 #' @importFrom stats reorder
 #' @importFrom stringr str_replace
+#' @importFrom stringr str_split
 #' @importFrom tibble rownames_to_column
 #' @importFrom tidyr nest
 #' @importFrom tidyr pivot_longer
