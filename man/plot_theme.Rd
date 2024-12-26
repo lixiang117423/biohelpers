@@ -4,12 +4,21 @@
 \alias{plot_theme}
 \title{ggplot2 plotting theme.}
 \usage{
-plot_theme(base.size = 10, strip.text.italic = FALSE)
+plot_theme(
+  base.size = 10,
+  strip.text.italic = FALSE,
+  show.minor.tricks.x = FALSE,
+  show.minor.tricks.y = TRUE
+)
 }
 \arguments{
 \item{base.size}{Default font size.}
 
 \item{strip.text.italic}{Whether the font is italic when displayed in groups.}
+
+\item{show.minor.tricks.x}{Whether to display the minor ticks on the X-axis.}
+
+\item{show.minor.tricks.y}{Whether to display the minor ticks on the y-axis.}
 }
 \value{
 A ggplot2 plot theme.

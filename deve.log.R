@@ -36,6 +36,7 @@ usethis::use_build_ignore("raw.data/")
 # file.create("R/find_outliner.R")
 # file.create("R/plot_theme.R")
 # file.create("R/reorder2heatmap.R")
+# file.create("R/show_minor_tricks.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -86,6 +87,8 @@ usethis::use_import_from("dplyr","arrange")
 usethis::use_import_from("dplyr","inner_join")
 usethis::use_import_from("dplyr","n")
 usethis::use_import_from("stats", "reorder")
+usethis::use_import_from("ggprism", "guide_prism_offset_minor")
+usethis::use_import_from("ggplot2", "guides")
 
 # 将某些文件格式化为tidyverse风格
 # styler::style_file("R/pca_in_one.R")
@@ -93,7 +96,7 @@ usethis::use_import_from("stats", "reorder")
 # styler::style_file("R/lm_and_plot.R")
 # styler::style_file("R/find_outliner.R")
 # styler::style_file("R/plot_theme.R")
-styler::style_file("R/reorder2heatmap.R")
+# styler::style_file("R/reorder2heatmap.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
@@ -116,7 +119,7 @@ devtools::check()
 # devtools::build()
 # devtools::check_built("../biohelpers_0.0.0.5.tar.gz")
 # file.rename("../biohelpers_0.0.0.5.tar.gz", "./biohelpers_0.0.0.5.tar.gz")
-devtools::install_local()
+devtools::install_local(force = TRUE)
 # usethis::use_github_release(publish = TRUE)
 
 # pkgdown添加网页,后续推送会自动更新

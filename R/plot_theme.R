@@ -2,6 +2,9 @@
 #'
 #' @param base.size Default font size.
 #' @param strip.text.italic Whether the font is italic when displayed in groups.
+#' @param show.minor.tricks.x Whether to display the minor ticks on the X-axis.
+#' @param show.minor.tricks.y Whether to display the minor ticks on the y-axis.
+#'
 #'
 #' @return A ggplot2 plot theme.
 #'
@@ -20,7 +23,7 @@
 #'   geom_point() +
 #'   plot_theme()
 #'
-plot_theme <- function(base.size = 10, strip.text.italic = FALSE) {
+plot_theme <- function(base.size = 10, strip.text.italic = FALSE, show.minor.tricks.x = FALSE, show.minor.tricks.y = TRUE) {
   mytheme <- ggthemes::theme_foundation(
     base_size = base.size
   ) +
@@ -76,5 +79,18 @@ plot_theme <- function(base.size = 10, strip.text.italic = FALSE) {
       angle = 0
     ))
   }
+
+  if (show.minor.tricks.x) {
+    mytheme <- mytheme + ggplot2::theme(axis.minor.ticks.length.x = ggplot2::unit(base.size * 0.2, "points"))
+  } else {
+    mytheme <- mytheme
+  }
+
+  if (show.minor.tricks.y) {
+    mytheme <- mytheme + ggplot2::theme(axis.minor.ticks.length.y = ggplot2::unit(base.size * 0.2, "points"))
+  } else {
+    mytheme <- mytheme
+  }
+
   return(mytheme)
 }

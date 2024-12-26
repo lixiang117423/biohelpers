@@ -16,6 +16,7 @@ Imports:
     factoextra,
     FactoMineR,
     ggplot2,
+    ggprism,
     ggthemes,
     magrittr,
     purrr,
