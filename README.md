@@ -20,7 +20,7 @@ devtools::install_github("lixiang117423/biohelpers")
 
 ## RNA-Seq
 
-
+[call_DEGs_DESeq2](https://lixiang117423.github.io/biohelpers/articles/call_DEGs_DESeq2.html)
 
 ## Metabolome
 
