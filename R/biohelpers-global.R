@@ -48,5 +48,8 @@ utils::globalVariables(c(
   "go.term",
   "go.rich",
   "df.term2gene",
-  "df.term2name"
+  "df.term2name",
+  # enrich_KEGGG
+  "kegg.id",
+  "kegg.term"
 ))

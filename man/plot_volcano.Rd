@@ -17,6 +17,10 @@ plot_volcano(
 \arguments{
 \item{data}{The data frame used to create the scatter plot is typically the output of DESeq2, specifically the output from call_DEGs_DESeq2.}
 
+\item{x}{X axis.}
+
+\item{y}{Y axis.}
+
 \item{size}{Column name used to map the size of the points, default is baseMean.}
 
 \item{color}{Column name used to map the color of the points.}

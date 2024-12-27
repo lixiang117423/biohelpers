@@ -1,6 +1,8 @@
 #' Create a volcano plot.
 #'
 #' @param data The data frame used to create the scatter plot is typically the output of DESeq2, specifically the output from call_DEGs_DESeq2.
+#' @param x X axis.
+#' @param y Y axis.
 #' @param size Column name used to map the size of the points, default is baseMean.
 #' @param color Column name used to map the color of the points.
 #' @param xintercept.abs Intercept of X axes. It is usually log2FoldChange, which includes both positive and negative values.

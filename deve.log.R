@@ -117,7 +117,7 @@ usethis::use_import_from("ggsci", "scale_color_d3")
 # styler::style_file("R/call_DEGs_DESeq2.R")
 # styler::style_file("R/enrich_GO.R")
 # styler::style_file("R/enrich_KEGG.R")
-styler::style_file("R/plot_volcano.R")
+# styler::style_file("R/plot_volcano.R")
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
