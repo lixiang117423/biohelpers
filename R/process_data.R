@@ -74,3 +74,25 @@
 
 # usethis::use_data(df.rnaseq.plot_volcano, overwrite = TRUE)
 
+# # PCoA
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/微生物组数据.最终数据.xlsx", sheet = "otu") %>% 
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", group == "bacteria") -> df.otu
+
+# df.otu %>% 
+#   dplyr::select(treatment, replicates, OTU, value) %>% 
+#   dplyr::mutate(sample = paste0(treatment, "_", replicates)) %>% 
+#   dplyr::select(sample, OTU, value) %>% 
+#   tidyr::pivot_wider(names_from = OTU, values_from = value) %>% 
+#   tibble::column_to_rownames(var = "sample") -> df.pcoa.otu
+
+# usethis::use_data(df.pcoa.otu, overwrite = TRUE)
+
+# rownames(df.pcoa.otu) %>% 
+#   as.data.frame() %>% 
+#   magrittr::set_names("sample") %>% 
+#   dplyr::mutate(group = stringr::str_split(sample, "_") %>% sapply("[", 1)) -> df.pcoa.sample
+
+# usethis::use_data(df.pcoa.sample, overwrite = TRUE)
+
+
+

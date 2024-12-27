@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom ape pcoa
 #' @importFrom clusterProfiler enricher
 #' @importFrom DESeq2 DESeq
 #' @importFrom DESeq2 DESeqDataSetFromMatrix
@@ -48,6 +49,7 @@
 #' @importFrom tibble rownames_to_column
 #' @importFrom tidyr nest
 #' @importFrom tidyr pivot_longer
+#' @importFrom vegan vegdist
 #' @importFrom WGCNA corAndPvalue
 ## usethis namespace: end
 NULL

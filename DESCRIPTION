@@ -12,6 +12,7 @@ BugReports: https://github.com/lixiang117423/biohelpers/issues
 Depends: 
     R (>= 2.10)
 Imports: 
+    ape,
     clusterProfiler,
     DESeq2,
     dplyr,
@@ -28,6 +29,7 @@ Imports:
     stringr,
     tibble,
     tidyr,
+    vegan,
     WGCNA
 Suggests: 
     knitr,

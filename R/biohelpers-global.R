@@ -51,5 +51,16 @@ utils::globalVariables(c(
   "df.term2name",
   # enrich_KEGGG
   "kegg.id",
-  "kegg.term"
+  "kegg.term",
+
+  # PCoA
+  "pcoa.res",
+  "pcoa.weight",
+  "df.pcoa.point",
+  "pcoa.weight.plot",
+  "df.x.label",
+  "df.y.label",
+  "p"
+
+
 ))

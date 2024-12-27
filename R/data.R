@@ -100,3 +100,23 @@
 #' }
 #' @source Xiang Li
 "df.rnaseq.plot_volcano"
+
+#' Test data.
+#'
+#' @format ## `df.pcoa.otu`
+#' A data frame with 9 rows and 11,267 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.pcoa.otu"
+
+#' Test data.
+#'
+#' @format ## `df.pcoa.sample`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#'   \item{sample}{sample name}
+#'   \item{group}{sample group}
+#' }
+#' @source Xiang Li
+"df.pcoa.sample"

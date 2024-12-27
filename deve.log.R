@@ -43,6 +43,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/enrich_GO.R")
 # file.create("R/enrich_KEGG.R")
 # file.create("R/plot_volcano.R")
+# file.create("R/PCoA.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -104,8 +105,11 @@ usethis::use_import_from("clusterProfiler", "enricher")
 usethis::use_import_from("ggplot2", "geom_hline")
 usethis::use_import_from("ggplot2", "geom_vline")
 usethis::use_import_from("ggsci", "scale_color_d3")
+usethis::use_import_from("vegan", "vegdist")
+usethis::use_import_from("ape", "pcoa")
 
 
+123
 
 # 将某些文件格式化为tidyverse风格
 # styler::style_file("R/pca_in_one.R")
@@ -118,6 +122,10 @@ usethis::use_import_from("ggsci", "scale_color_d3")
 # styler::style_file("R/enrich_GO.R")
 # styler::style_file("R/enrich_KEGG.R")
 # styler::style_file("R/plot_volcano.R")
+styler::style_file("R/PCoA.R")
+
+123
+
 
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
