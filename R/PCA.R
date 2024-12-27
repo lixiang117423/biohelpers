@@ -23,9 +23,9 @@
 #'   rownames_to_column(var = "sample") %>%
 #'   set_names(c("sample", "species"))
 #'
-#' pca_in_one(data, sample) -> result.pca
+#' PCA(data, sample) -> result.pca
 #'
-pca_in_one <- function(data, sample, pca.num = 5, plot = TRUE, x = "pc1", y = "pc2", color = "species", shape = "species") {
+PCA <- function(data, sample, pca.num = 5, plot = TRUE, x = "pc1", y = "pc2", color = "species", shape = "species") {
   # run PCA
   FactoMineR::PCA({{ data }}, ncp = {{ pca.num }}, graph = FALSE) -> pca.res
 

@@ -139,7 +139,6 @@ devtools::check()
 # 编译R包并安装
 # devtools::build()
 # devtools::check_built("../biohelpers_0.0.0.5.tar.gz")
-# file.rename("../biohelpers_0.0.0.5.tar.gz", "./biohelpers_0.0.0.5.tar.gz")
 devtools::install_local(force = TRUE)
 # usethis::use_github_release(publish = TRUE)
 
