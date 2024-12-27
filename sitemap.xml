@@ -25,6 +25,9 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.kegg.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.plot_volcano.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.sample.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.class.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.otu.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/enrich_GO.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/enrich_KEGG.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/find_outliner.html</loc></url>
@@ -34,5 +37,6 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/plot_volcano.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/reorder2heatmap.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/test_data.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/top_10.html</loc></url>
 </urlset>
 
