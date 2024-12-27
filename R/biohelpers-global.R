@@ -60,7 +60,21 @@ utils::globalVariables(c(
   "pcoa.weight.plot",
   "df.x.label",
   "df.y.label",
-  "p"
+  "p",
 
+  # top_10
+  "df.all",
+  "df.top9",
+  "df.all.new",
+  "df.stat.new",
+  "signif",
+  "OTU", 
+  "Relative_eig", 
+  "group", 
+  "group2",
+  "label", 
+  "position_fill",
+  "relative.eig",
+  "value"
 
 ))

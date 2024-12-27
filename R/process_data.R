@@ -94,5 +94,30 @@
 
 # usethis::use_data(df.pcoa.sample, overwrite = TRUE)
 
+# # top_10
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/微生物组数据.最终数据.xlsx", sheet = "otu") -> df.otu
 
+# df.otu %>% 
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", group == "bacteria") %>% 
+#   dplyr::select(treatment, replicates, OTU, value, phylum) %>% 
+#   dplyr::mutate(sample = paste0(treatment, "_", replicates)) %>% 
+#   dplyr::select(sample, OTU, value) %>% 
+#   tidyr::pivot_wider(names_from = OTU, values_from = value) %>% 
+#   tibble::column_to_rownames(var = "sample") -> df.top10.otu
 
+# usethis::use_data(df.top10.otu, overwrite = TRUE)
+
+# df.top10.otu %>% 
+#   rownames() %>% 
+#   as.data.frame() %>% 
+#   magrittr::set_names("sample") %>% 
+#   dplyr::mutate(group = stringr::str_split(sample, "_") %>% sapply("[", 1)) -> df.top10.sample
+  
+# usethis::use_data(df.top10.sample, overwrite = TRUE)
+
+# df.otu %>% 
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", group == "bacteria") %>% 
+#   dplyr::select(OTU, phylum, class, order, family, genus, species) %>% 
+#   dplyr::distinct_all() -> df.top10.class
+
+# usethis::use_data(df.top10.class, overwrite = TRUE)

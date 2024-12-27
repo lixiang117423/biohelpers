@@ -25,6 +25,8 @@ Imports:
     magrittr,
     purrr,
     rlang,
+    rstatix,
+    scales,
     stats,
     stringr,
     tibble,

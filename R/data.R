@@ -120,3 +120,32 @@
 #' }
 #' @source Xiang Li
 "df.pcoa.sample"
+
+#' Test data.
+#'
+#' @format ## `df.top10.otu`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.top10.otu"
+
+#' Test data.
+#'
+#' @format ## `df.top10.sample`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#'   \item{sample}{sample name}
+#'   \item{group}{sample group}
+#' }
+#' @source Xiang Li
+"df.top10.sample"
+
+#' Test data.
+#'
+#' @format ## `df.top10.calss`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.top10.class"
