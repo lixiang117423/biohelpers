@@ -3,6 +3,7 @@
 export(PCA)
 export(PCoA)
 export(call_DEGs_DESeq2)
+export(call_DEMs_DESeq2)
 export(cor_and_plot)
 export(enrich_GO)
 export(enrich_KEGG)

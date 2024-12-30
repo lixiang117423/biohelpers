@@ -47,7 +47,7 @@ top_10 <- function(data, sample, taxo, which = "phylum", by = "sum", method = "w
   df.all %>%
     dplyr::rename(taxo = {{ which }}) %>%
     dplyr::mutate(taxo = dplyr::case_when(taxo %in% df.top9$taxo ~ taxo, TRUE ~ "Other")) %>%
-    dplyr::mutate(taxo = factor(taxo, level = c(df.top9$taxo, "Other"))) -> df.all.new
+    dplyr::mutate(taxo = factor(taxo, levels = c(df.top9$taxo, "Other"))) -> df.all.new
 
   # sum by sample and statistics
   df.all.new %>%
@@ -80,4 +80,3 @@ top_10 <- function(data, sample, taxo, which = "phylum", by = "sum", method = "w
   # return
   list(stat.top_10 = stat.result, plot.top_10 = plot.result) %>% return()
 }
-
