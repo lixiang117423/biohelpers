@@ -35,7 +35,7 @@ cor_and_plot <- function(data.1, data.2 = NULL, method = "pearson", cor = 0.6, p
       tidyr::pivot_longer(cols = 2:ncol(.), names_to = "to", values_to = "pvalue") -> df.pvalue
 
     dplyr::left_join(df.cor, df.pvalue) %>%
-      dplyr::filter(pvalue <= {{ pvalue }}, cor >= {{ cor }}, from != to) -> result.cor
+      dplyr::filter(pvalue <= {{ pvalue }}, abs(cor) >= {{ cor }}, from != to) -> result.cor
   } else {
     WGCNA::corAndPvalue(x = {{ data.1 }}, y = {{ data.2 }}, method = {{ method }}) -> cor.res
 
@@ -50,7 +50,7 @@ cor_and_plot <- function(data.1, data.2 = NULL, method = "pearson", cor = 0.6, p
       tidyr::pivot_longer(cols = 2:ncol(.), names_to = "to", values_to = "pvalue") -> df.pvalue
 
     dplyr::left_join(df.cor, df.pvalue) %>%
-      dplyr::filter(pvalue <= {{ pvalue }}, cor >= {{ cor }}, from != to) -> result.cor
+      dplyr::filter(pvalue <= {{ pvalue }}, abs(cor) >= {{ cor }}, from != to) -> result.cor
   }
 
   # return
