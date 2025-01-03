@@ -47,7 +47,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">RNASeq.call_DEGs_DESeq2</span><span class="op">(</span><span class="va">data</span>, <span class="va">sample</span>, <span class="va">group</span>, log2FoldChange <span class="op">=</span> <span class="fl">1</span>, padj <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">RNASeq.call_DEGs_DESeq2</span><span class="op">(</span><span class="va">data</span>, <span class="va">sample</span>, log2FoldChange <span class="op">=</span> <span class="fl">1</span>, padj <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -60,10 +60,6 @@
 
 <dt id="arg-sample">sample<a class="anchor" aria-label="anchor" href="#arg-sample"></a></dt>
 <dd><p>Sample information table, with rows representing sample names.</p></dd>
-
-
-<dt id="arg-group">group<a class="anchor" aria-label="anchor" href="#arg-group"></a></dt>
-<dd><p>Grouping information of samples, the column names in the @param sample table, must be factors.</p></dd>
 
 
 <dt id="arg-log-foldchange">log2FoldChange<a class="anchor" aria-label="anchor" href="#arg-log-foldchange"></a></dt>
@@ -89,8 +85,7 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">df.rnaseq.sample</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">RNASeq.call_DEGs_DESeq2</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  data <span class="op">=</span> <span class="va">df.rnaseq.gene</span>,</span></span>
-<span class="r-in"><span>  sample <span class="op">=</span> <span class="va">df.rnaseq.sample</span>,</span></span>
-<span class="r-in"><span>  group <span class="op">=</span> <span class="st">"group"</span></span></span>
+<span class="r-in"><span>  sample <span class="op">=</span> <span class="va">df.rnaseq.sample</span></span></span>
 <span class="r-in"><span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">degs</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> converting counts to integer mode</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> estimating size factors</span>
