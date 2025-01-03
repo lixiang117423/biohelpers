@@ -17,11 +17,11 @@
 #'
 #' data(df.rnaseq.plot_volcano)
 #'
-#' plot_volcano(data = df.rnaseq.plot_volcano) -> p
-#' 
-plot_volcano <- function(data, x = "log2FoldChange", y = "padj", size = "baseMean", color = "group", xintercept.abs = 1, yintercept = 0.05) {
-  {{ data }} %>% 
-  ggplot2::ggplot(ggplot2::aes(x = !!rlang::sym({{ x }}), y = -log10(!!rlang::sym({{ y }})), color = !!rlang::sym({{ color }}))) +
+#' RNASeq.plot_volcano(data = df.rnaseq.plot_volcano) -> p
+#'
+RNASeq.plot_volcano <- function(data, x = "log2FoldChange", y = "padj", size = "baseMean", color = "group", xintercept.abs = 1, yintercept = 0.05) {
+  {{ data }} %>%
+    ggplot2::ggplot(ggplot2::aes(x = !!rlang::sym({{ x }}), y = -log10(!!rlang::sym({{ y }})), color = !!rlang::sym({{ color }}))) +
     ggplot2::geom_point(ggplot2::aes(size = !!rlang::sym({{ size }})), alpha = 0.8) +
     ggplot2::geom_hline(yintercept = -log10({{ yintercept }}), linetype = "dashed") +
     ggplot2::geom_vline(xintercept = c({{ xintercept.abs }}, -{{ xintercept.abs }}), linetype = "dashed") +

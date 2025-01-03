@@ -18,9 +18,9 @@
 #' data(df.rnaseq.go)
 #' data(df.rnaseq.degs)
 #'
-#' enrich_GO(gene = df.rnaseq.degs$gene, go.db = df.rnaseq.go) -> go.res
+#' RNASeq.enrich_GO(gene = df.rnaseq.degs$gene, go.db = df.rnaseq.go) -> go.res
 #'
-enrich_GO <- function(gene, go.db, pAdjustMethod = "BH", p.adjust = 0.05) {
+RNASeq.enrich_GO <- function(gene, go.db, pAdjustMethod = "BH", p.adjust = 0.05) {
   {{ go.db }} %>%
     dplyr::select(go.id, gene) -> df.term2gene
 

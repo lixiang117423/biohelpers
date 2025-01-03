@@ -17,9 +17,9 @@
 #' x <- iris[, 1:4]
 #' y <- iris[, 1:4]
 #'
-#' cor_and_plot(data.1 = x, data.2 = y) -> result.cor
+#' CommonlyUsed.cor_and_plot(data.1 = x, data.2 = y) -> result.cor
 #'
-cor_and_plot <- function(data.1, data.2 = NULL, method = "pearson", cor = 0.6, pvalue = 0.05) {
+CommonlyUsed.cor_and_plot <- function(data.1, data.2 = NULL, method = "pearson", cor = 0.6, pvalue = 0.05) {
   # If there is only one data frame, directly calculate the correlation between the variables.
   if (is.null({{ data.2 }})) {
     WGCNA::corAndPvalue(x = {{ data.1 }}, method = {{ method }}) -> cor.res

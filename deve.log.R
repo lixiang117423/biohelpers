@@ -47,6 +47,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/top_10.R")
 # file.create("R/call_DEMs_DESeq2.R")
 # file.create("R/call_DAMs_LEfSe.R")
+# file.create("R/microbiome.RDA.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -119,21 +120,12 @@ usethis::use_import_from("lefser", "lefser")
 123
 
 # 将某些文件格式化为tidyverse风格
-# styler::style_file("R/pca_in_one.R")
-# styler::style_file("R/cor_and_plot.R")
-# styler::style_file("R/lm_and_plot.R")
-# styler::style_file("R/find_outliner.R")
-# styler::style_file("R/plot_theme.R")
-# styler::style_file("R/reorder2heatmap.R")
-# styler::style_file("R/call_DEGs_DESeq2.R")
-# styler::style_file("R/enrich_GO.R")
-# styler::style_file("R/enrich_KEGG.R")
-# styler::style_file("R/plot_volcano.R")
-# styler::style_file("R/PCoA.R")
-# styler::style_file("R/top_10.R")
-# styler::style_file("R/call_DEMs_DESeq2.R")
-styler::style_file("R/call_DAMs_LEfSe.R")
-
+dir("R") %>% 
+  as.data.frame() %>% 
+  magrittr::set_names("file") %>% 
+  dplyr::mutate(path = paste0("R/", file)) %>% 
+  dplyr::pull(path) %>%  
+  purrr::walk(~ styler::style_file(.))
 
 123
 

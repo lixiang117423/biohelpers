@@ -1,8 +1,8 @@
 utils::globalVariables(c(
   # pca_in_one function
-  "%>%", 
-  ".", 
-  "variance.percent", 
+  "%>%",
+  ".",
+  "variance.percent",
   "pc",
   "plot.pca",
   "sym",
@@ -68,13 +68,12 @@ utils::globalVariables(c(
   "df.all.new",
   "df.stat.new",
   "signif",
-  "OTU", 
-  "Relative_eig", 
-  "group", 
+  "OTU",
+  "Relative_eig",
+  "group",
   "group2",
-  "label", 
+  "label",
   "position_fill",
   "relative.eig",
   "value"
-
 ))

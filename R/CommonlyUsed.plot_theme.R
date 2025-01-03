@@ -21,9 +21,9 @@
 #' iris %>%
 #'   ggplot(aes(Sepal.Length, Sepal.Width)) +
 #'   geom_point() +
-#'   plot_theme()
+#'   CommonlyUsed.plot_theme()
 #'
-plot_theme <- function(base.size = 10, strip.text.italic = FALSE, show.minor.tricks.x = FALSE, show.minor.tricks.y = TRUE) {
+CommonlyUsed.plot_theme <- function(base.size = 10, strip.text.italic = FALSE, show.minor.tricks.x = FALSE, show.minor.tricks.y = TRUE) {
   mytheme <- ggthemes::theme_foundation(
     base_size = base.size
   ) +

@@ -20,9 +20,9 @@
 #' data(df.pcoa.otu)
 #' data(df.pcoa.sample)
 #'
-#' PCoA(data = df.pcoa.otu, sample = df.pcoa.sample) -> pcoa.res
+#' Microbiome.PCoA(data = df.pcoa.otu, sample = df.pcoa.sample) -> pcoa.res
 #'
-PCoA <- function(data, sample, method = "bray", x = "PCo1", y = "PCo2", size = 2, color = "group", alpha = 1) {
+Microbiome.PCoA <- function(data, sample, method = "bray", x = "PCo1", y = "PCo2", size = 2, color = "group", alpha = 1) {
   {{ data }} %>%
     vegan::vegdist(method = {{ method }}) %>%
     ape::pcoa() -> pcoa.res

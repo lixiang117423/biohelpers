@@ -14,7 +14,8 @@
 #' library(biohelpers)
 #'
 #' df <- iris
-#' lm_and_plot(
+#'
+#' CommonlyUsed.lm_and_plot(
 #'   data = df,
 #'   x = "Sepal.Length",
 #'   y = "Sepal.Width",
@@ -22,7 +23,7 @@
 #'   color = "Species"
 #' ) -> results.lm
 #'
-lm_and_plot <- function(data, x, y, group, color) {
+CommonlyUsed.lm_and_plot <- function(data, x, y, group, color) {
   # Batch calculate R² and P-values.
 
   get_R2 <- function(fit) {

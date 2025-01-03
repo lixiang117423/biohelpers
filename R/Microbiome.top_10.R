@@ -10,21 +10,21 @@
 #' @param pvalue Threshold for the p-value, with a default of 0.05.
 #'
 #' @return A list containing a data frame and a ggplot2 object.
-#' 
+#'
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' library(dplyr)
 #' library(biohelpers)
-#' 
+#'
 #' data(df.top10.otu)
 #' data(df.top10.sample)
 #' data(df.top10.class)
-#' 
-#' top_10(df.top10.otu, df.top10.sample, df.top10.class) -> top10.res
-#' 
-top_10 <- function(data, sample, taxo, which = "phylum", by = "sum", method = "wilcox", ref = "CK", pvalue = 0.05) {
+#'
+#' Microbiome.top_10(df.top10.otu, df.top10.sample, df.top10.class) -> top10.res
+#'
+Microbiome.top_10 <- function(data, sample, taxo, which = "phylum", by = "sum", method = "wilcox", ref = "CK", pvalue = 0.05) {
   # merger data
   {{ data }} %>%
     tibble::rownames_to_column(var = "sample") %>%

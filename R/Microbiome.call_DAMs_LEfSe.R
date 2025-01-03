@@ -19,9 +19,9 @@
 #' data(df.call_DAMs_LEfSe.otu)
 #' data(df.call_DAMs_LEfSe.sample)
 #'
-#' call_DAMs_LEfSe(df.call_DAMs_LEfSe.otu, df.call_DAMs_LEfSe.sample) -> lefse.result
+#' Microbiome.call_DAMs_LEfSe(df.call_DAMs_LEfSe.otu, df.call_DAMs_LEfSe.sample) -> lefse.result
 #'
-call_DAMs_LEfSe <- function(data, sample, groupCol = "group", kruskal.threshold = 0.05, wilcox.threshold = 0.05, lda.threshold = 1) {
+Microbiome.call_DAMs_LEfSe <- function(data, sample, groupCol = "group", kruskal.threshold = 0.05, wilcox.threshold = 0.05, lda.threshold = 1) {
   SummarizedExperiment::SummarizedExperiment(assays = list(counts = {{ data }}), colData = {{ sample }}) %>%
     lefser::lefser(groupCol = {{ groupCol }}, kruskal.threshold = {{ kruskal.threshold }}, wilcox.threshold = {{ wilcox.threshold }}, lda.threshold = {{ lda.threshold }}) -> lefse.result
 

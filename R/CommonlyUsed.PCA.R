@@ -23,9 +23,9 @@
 #'   rownames_to_column(var = "sample") %>%
 #'   set_names(c("sample", "species"))
 #'
-#' PCA(data, sample) -> result.pca
+#' CommonlyUsed.PCA(data, sample) -> result.pca
 #'
-PCA <- function(data, sample, pca.num = 5, plot = TRUE, x = "pc1", y = "pc2", color = "species", shape = "species") {
+CommonlyUsed.PCA <- function(data, sample, pca.num = 5, plot = TRUE, x = "pc1", y = "pc2", color = "species", shape = "species") {
   # run PCA
   FactoMineR::PCA({{ data }}, ncp = {{ pca.num }}, graph = FALSE) -> pca.res
 
@@ -64,15 +64,3 @@ PCA <- function(data, sample, pca.num = 5, plot = TRUE, x = "pc1", y = "pc2", co
 
   return(return.list)
 }
-
-
-
-
-
-
-
-
-
-
-
-

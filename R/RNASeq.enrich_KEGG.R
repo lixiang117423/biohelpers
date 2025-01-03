@@ -18,9 +18,9 @@
 #' data(df.rnaseq.kegg)
 #' data(df.rnaseq.degs)
 #'
-#' enrich_KEGG(gene = df.rnaseq.degs$gene, kegg.db = df.rnaseq.kegg) -> kegg.res
+#' RNASeq.enrich_KEGG(gene = df.rnaseq.degs$gene, kegg.db = df.rnaseq.kegg) -> kegg.res
 #'
-enrich_KEGG <- function(gene, kegg.db, pAdjustMethod = "BH", p.adjust = 0.05) {
+RNASeq.enrich_KEGG <- function(gene, kegg.db, pAdjustMethod = "BH", p.adjust = 0.05) {
   {{ kegg.db }} %>%
     dplyr::select(kegg.id, gene) -> df.term2gene
 
