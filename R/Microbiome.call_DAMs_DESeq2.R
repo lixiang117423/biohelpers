@@ -6,7 +6,7 @@
 #' @param log2FoldChange The threshold for the absolute value of log2FoldChange is set to 1 by default.
 #' @param padj The threshold for the adjusted p-value is set to 0.05 by default.
 #'
-#' @return
+#' @return A data frame from DESeq2.
 #' @export
 #'
 #' @examples
@@ -32,7 +32,7 @@ Microbiome.call_DAMs_DESeq2 <- function(data, sample, group = "group", log2FoldC
       log2FoldChange < -{{ log2FoldChange }} & padj < {{ padj }} ~ "Depleted",
       TRUE ~ "NS"
     )) %>%
-    tibble::rownames_to_column(var = "OTU") -> dems
+    tibble::rownames_to_column(var = "OTU") -> dams
 
-  return(dems)
+  return(dams)
 }

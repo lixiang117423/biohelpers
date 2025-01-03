@@ -129,7 +129,6 @@ dir("R") %>%
 
 123
 
-
 # 编译vignettes
 # usethis::use_vignette(name = "pca_in_one") # 运行第二次会覆盖之前的
 # usethis::use_vignette(name = "cor_and_plot")
