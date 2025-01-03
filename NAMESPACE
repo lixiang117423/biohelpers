@@ -2,6 +2,7 @@
 
 export(CommonlyUsed.PCA)
 export(CommonlyUsed.cor_and_plot)
+export(CommonlyUsed.df_to_list)
 export(CommonlyUsed.find_outliner)
 export(CommonlyUsed.lm_and_plot)
 export(CommonlyUsed.plot_theme)
