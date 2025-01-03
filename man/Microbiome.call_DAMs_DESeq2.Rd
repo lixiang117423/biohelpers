@@ -23,6 +23,9 @@ Microbiome.call_DAMs_DESeq2(
 
 \item{padj}{The threshold for the adjusted p-value is set to 0.05 by default.}
 }
+\value{
+A data frame from DESeq2.
+}
 \description{
 Title
 }

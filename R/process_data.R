@@ -155,3 +155,33 @@
 
 # SummarizedExperiment(assays = list(counts = otu), colData = sample) %>%
 #   lefser::lefser(groupCol = "group", kruskal.threshold = 0.05, wilcox.threshold = 0.05, lda.threshold = 1) -> lefse.result
+
+# # RDA
+
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/理化性质.最终数据.xlsx") %>%
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", days == 180) %>%
+#   dplyr::select(treatment, replicates, group, value) %>%
+#   dplyr::mutate(replicates = stringr::str_remove(replicates, "replicates.")) %>%
+#   dplyr::mutate(sample = paste(treatment, "_", replicates)) %>%
+#   dplyr::select(sample, group, value) %>%
+#   tidyr::pivot_wider(names_from = group, values_from = value) %>%
+#   tibble::column_to_rownames(var = "sample") -> df.rda.chem
+
+# usethis::use_data(df.rda.chem, overwrite = TRUE)
+
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/微生物组数据.最终数据.xlsx", sheet = "otu") %>%
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", group == "bacteria") %>%
+#   dplyr::select(treatment, replicates, OTU, value) %>%
+#   dplyr::mutate(sample = paste(treatment, "_", replicates)) %>%
+#   dplyr::select(sample, OTU, value) %>%
+#   tidyr::pivot_wider(names_from = OTU, values_from = value) %>%
+#   tibble::column_to_rownames(var = "sample") -> df.rda.otu
+
+# usethis::use_data(df.rda.otu, overwrite = TRUE)
+
+
+# # 对OTU数据进行hellinger转化
+# vegan::decostand(df.otu, method = "hellinger") -> sampledata
+
+# # 运行RDA
+# vegan::rda(sampledata ~ ., df.chem, scale = FALSE) -> rda.res

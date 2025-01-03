@@ -167,3 +167,21 @@
 #' }
 #' @source Xiang Li
 "df.call_DAMs_LEfSe.sample"
+
+#' Test data.
+#'
+#' @format ## `df.rda.chem`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.rda.chem"
+
+#' Test data.
+#'
+#' @format ## `df.rda.otu`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.rda.otu"

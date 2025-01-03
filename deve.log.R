@@ -47,7 +47,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/top_10.R")
 # file.create("R/call_DEMs_DESeq2.R")
 # file.create("R/call_DAMs_LEfSe.R")
-# file.create("R/microbiome.RDA.R")
+# file.create("R/Microbiome.RDA.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -116,6 +116,14 @@ usethis::use_import_from("scales", "percent")
 usethis::use_import_from("ggplot2", "position_fill")
 usethis::use_import_from("SummarizedExperiment", "SummarizedExperiment")
 usethis::use_import_from("lefser", "lefser")
+usethis::use_import_from("vegan", "decostand")
+usethis::use_import_from("vegan", "rda")
+usethis::use_import_from("vegan", "scores")
+usethis::use_import_from("vegan", "envfit")
+usethis::use_import_from("ggrepel", "geom_label_repel")
+usethis::use_import_from("ggplot2", "arrow")
+usethis::use_import_from("ggplot2", "unit")
+usethis::use_import_from("ggplot2", "geom_segment")
 
 123
 

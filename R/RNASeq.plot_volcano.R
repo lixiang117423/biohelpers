@@ -26,7 +26,7 @@ RNASeq.plot_volcano <- function(data, x = "log2FoldChange", y = "padj", size = "
     ggplot2::geom_hline(yintercept = -log10({{ yintercept }}), linetype = "dashed") +
     ggplot2::geom_vline(xintercept = c({{ xintercept.abs }}, -{{ xintercept.abs }}), linetype = "dashed") +
     ggsci::scale_color_d3() +
-    biohelpers::plot_theme() -> p
+    biohelpers::CommonlyUsed.plot_theme() -> p
 
   return(p)
 }

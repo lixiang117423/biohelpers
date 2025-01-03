@@ -20,6 +20,7 @@ Imports:
     FactoMineR,
     ggplot2,
     ggprism,
+    ggrepel,
     ggsci,
     ggthemes,
     lefser,

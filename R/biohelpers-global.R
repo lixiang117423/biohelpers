@@ -75,5 +75,16 @@ utils::globalVariables(c(
   "label",
   "position_fill",
   "relative.eig",
-  "value"
+  "value",
+
+  # RDA
+  "data.new",
+  "rda.res",
+  "df.chem.point",
+  "df.sample.point",
+  "RDA1",
+  "RDA2",
+  "envfit.res",
+  "chem",
+  "PCoA"
 ))
