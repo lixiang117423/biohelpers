@@ -2,7 +2,9 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom agricolae duncan.test
 #' @importFrom ape pcoa
+#' @importFrom broom tidy
 #' @importFrom clusterProfiler enricher
 #' @importFrom DESeq2 DESeq
 #' @importFrom DESeq2 DESeqDataSetFromMatrix
@@ -42,12 +44,16 @@
 #' @importFrom ggthemes theme_foundation
 #' @importFrom lefser lefser
 #' @importFrom magrittr set_names
+#' @importFrom multcomp cld
+#' @importFrom multcomp glht
+#' @importFrom multcomp mcp
 #' @importFrom purrr map
 #' @importFrom purrr map_dbl
 #' @importFrom rlang sym
 #' @importFrom rstatix wilcox_test
 #' @importFrom scales percent
 #' @importFrom stats anova
+#' @importFrom stats aov
 #' @importFrom stats IQR
 #' @importFrom stats quantile
 #' @importFrom stats reorder

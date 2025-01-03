@@ -12,7 +12,9 @@ BugReports: https://github.com/lixiang117423/biohelpers/issues
 Depends: 
     R (>= 2.10)
 Imports: 
+    agricolae,
     ape,
+    broom,
     clusterProfiler,
     DESeq2,
     dplyr,
@@ -25,6 +27,7 @@ Imports:
     ggthemes,
     lefser,
     magrittr,
+    multcomp,
     purrr,
     rlang,
     rstatix,

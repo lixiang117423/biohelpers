@@ -86,5 +86,16 @@ utils::globalVariables(c(
   "RDA2",
   "envfit.res",
   "chem",
-  "PCoA"
+  "PCoA",
+
+  # Anova
+  "data.new",
+  "fit",
+  "res",
+  "anova.res",
+  "anova.pvalue",
+  "value",
+  "group",
+  "group.anova",
+  "id"
 ))

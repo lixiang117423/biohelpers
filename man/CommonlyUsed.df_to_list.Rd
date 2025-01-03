@@ -21,6 +21,9 @@ Convert data frame to list for venn plot.
 }
 \examples{
 
+library(dplyr)
+library(biohelpers)
+
 data.frame(group = "A", value = 1:10) -> df.1
 data.frame(group = "B", value = 3:12) -> df.2
 data.frame(group = "C", value = 7:20) -> df.3

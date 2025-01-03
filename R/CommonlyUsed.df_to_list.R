@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' library(dplyr)
 #' library(biohelpers)
 #'

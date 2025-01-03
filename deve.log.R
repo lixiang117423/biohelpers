@@ -49,6 +49,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/call_DAMs_LEfSe.R")
 # file.create("R/Microbiome.RDA.R")
 # file.create("R/CommonlyUsed.df_to_list.R")
+# file.create("R/CommonlyUsed.anova_and_post_test.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -125,6 +126,13 @@ usethis::use_import_from("ggrepel", "geom_label_repel")
 usethis::use_import_from("ggplot2", "arrow")
 usethis::use_import_from("ggplot2", "unit")
 usethis::use_import_from("ggplot2", "geom_segment")
+usethis::use_import_from("multcomp","glht")
+usethis::use_import_from("multcomp","mcp")
+usethis::use_import_from("multcomp","cld")
+usethis::use_import_from("broom","tidy")
+usethis::use_import_from("agricolae","duncan.test")
+usethis::use_import_from("stats", "aov")
+
 
 123
 

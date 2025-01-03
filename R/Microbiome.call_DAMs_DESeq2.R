@@ -2,7 +2,6 @@
 #'
 #' @param data Expression matrix must be integers, with rows representing gene names and columns representing sample names.
 #' @param sample Sample information table, with rows representing sample names.
-#' @param group Grouping information of samples, the column names in the @param sample table, must be factors.
 #' @param log2FoldChange The threshold for the absolute value of log2FoldChange is set to 1 by default.
 #' @param padj The threshold for the adjusted p-value is set to 0.05 by default.
 #'
@@ -18,11 +17,11 @@
 #'
 #' Microbiome.call_DAMs_DESeq2(t(df.pcoa.otu), df.pcoa.sample) -> dems.res
 #'
-Microbiome.call_DAMs_DESeq2 <- function(data, sample, group = "group", log2FoldChange = 1, padj = 0.05) {
+Microbiome.call_DAMs_DESeq2 <- function(data, sample, log2FoldChange = 1, padj = 0.05) {
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},
-    design = ~ {{ group }}
+    design = ~ group
   ) %>%
     DESeq2::DESeq() %>%
     DESeq2::results() %>%
