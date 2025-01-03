@@ -14,9 +14,12 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/PCA.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/PCoA.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/biohelpers-package.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/call_DAMs_DESeq2.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/call_DAMs_LEfSe.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/call_DEGs_DESeq2.html</loc></url>
-<url><loc>https://lixiang117423.github.io/biohelpers/reference/call_DEMs_DESeq2.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/cor_and_plot.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.call_DAMs_LEfSe.otu.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.call_DAMs_LEfSe.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.pcoa.otu.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.pcoa.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.reorder2heatmap.html</loc></url>
