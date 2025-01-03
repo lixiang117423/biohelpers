@@ -121,3 +121,37 @@
 #   dplyr::distinct_all() -> df.top10.class
 
 # usethis::use_data(df.top10.class, overwrite = TRUE)
+
+# call_DAMs_LEfSe
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/微生物组数据.最终数据.xlsx", sheet = "otu") %>% 
+#   dplyr::filter(environment == "Cropland", soil != "non-continuous cropping soil", group == "bacteria", treatment %in% c("CK", "Cover")) -> df.otu
+
+# df.otu %>% 
+#   dplyr::select(treatment, OTU, value) %>% 
+#   dplyr::group_by(treatment, OTU) %>% 
+#   dplyr::summarise(sd = sd(value)) %>% 
+#   dplyr::ungroup() %>% 
+#   dplyr::filter(sd != 0) -> df.filtered.otu
+
+# df.otu %>% 
+#   dplyr::select(treatment, replicates, OTU, value) %>% 
+#   dplyr::mutate(sample = paste0(treatment, replicates)) %>% 
+#   dplyr::select(sample, OTU, value) %>% 
+#   tidyr::pivot_wider(names_from = sample, values_from = value) %>% 
+#   dplyr::filter(OTU %in% df.filtered.otu$OTU) %>% 
+#   tibble::column_to_rownames(var = "OTU") -> df.call_DAMs_LEfSe.otu
+
+# usethis::use_data(df.call_DAMs_LEfSe.otu, overwrite = TRUE)
+
+# df.otu %>% 
+#   dplyr::select(treatment, replicates) %>% 
+#   dplyr::mutate(sample = paste0(treatment, replicates)) %>% 
+#   dplyr::select(sample, treatment) %>% 
+#   dplyr::rename(group = treatment) %>% 
+#   dplyr::distinct_all() %>% 
+#   tibble::column_to_rownames(var = "sample") -> df.call_DAMs_LEfSe.sample
+
+# usethis::use_data(df.call_DAMs_LEfSe.sample, overwrite = TRUE)
+
+# SummarizedExperiment(assays = list(counts = otu), colData = sample) %>% 
+#   lefser::lefser(groupCol = "group", kruskal.threshold = 0.05, wilcox.threshold = 0.05, lda.threshold = 1) -> lefse.result

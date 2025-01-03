@@ -46,6 +46,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/PCoA.R")
 # file.create("R/top_10.R")
 # file.create("R/call_DEMs_DESeq2.R")
+# file.create("R/call_DAMs_LEfSe.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -112,6 +113,8 @@ usethis::use_import_from("ape", "pcoa")
 usethis::use_import_from("rstatix", "wilcox_test")
 usethis::use_import_from("scales", "percent")
 usethis::use_import_from("ggplot2", "position_fill")
+usethis::use_import_from("SummarizedExperiment", "SummarizedExperiment")
+usethis::use_import_from("lefser", "lefser")
 
 123
 
@@ -129,6 +132,7 @@ usethis::use_import_from("ggplot2", "position_fill")
 # styler::style_file("R/PCoA.R")
 # styler::style_file("R/top_10.R")
 # styler::style_file("R/call_DEMs_DESeq2.R")
+styler::style_file("R/call_DAMs_LEfSe.R")
 
 
 123

@@ -149,3 +149,21 @@
 #' }
 #' @source Xiang Li
 "df.top10.class"
+
+#' Test data.
+#'
+#' @format ## `df.call_DAMs_LEfSe.otu`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.call_DAMs_LEfSe.otu"
+
+#' Test data.
+#'
+#' @format ## `df.call_DAMs_LEfSe.sample`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.call_DAMs_LEfSe.sample"

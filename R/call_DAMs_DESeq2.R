@@ -16,9 +16,9 @@
 #' data(df.pcoa.otu)
 #' data(df.pcoa.sample)
 #'
-#' call_DEMs_DESeq2(t(df.pcoa.otu), df.pcoa.sample) -> dems.res
+#' call_DAMs_DESeq2(t(df.pcoa.otu), df.pcoa.sample) -> dems.res
 #'
-call_DEMs_DESeq2 <- function(data, sample, group = "group", log2FoldChange = 1, padj = 0.05) {
+call_DAMs_DESeq2 <- function(data, sample, group = "group", log2FoldChange = 1, padj = 0.05) {
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},
