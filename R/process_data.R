@@ -185,3 +185,15 @@
 
 # # 运行RDA
 # vegan::rda(sampledata ~ ., df.chem, scale = FALSE) -> rda.res
+
+# # PERMANOVA
+# readxl::read_excel("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/11.辣椒和黄精微生物组/data/样品信息.辣椒.xlsx") -> df.permanova.sample
+
+# usethis::use_data(df.permanova.sample, overwrite = TRUE)
+
+# readr::read_delim("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/11.辣椒和黄精微生物组/results/01.辣椒/02.抽平后的ASV表.txt") %>%
+#   tibble::column_to_rownames(var = "ASV") %>% 
+#   t() %>% 
+#   as.data.frame()-> df.permanova.otu
+
+# usethis::use_data(df.permanova.otu, overwrite = TRUE)

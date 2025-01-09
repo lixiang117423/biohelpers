@@ -63,6 +63,7 @@
 #' @importFrom tibble rownames_to_column
 #' @importFrom tidyr nest
 #' @importFrom tidyr pivot_longer
+#' @importFrom vegan adonis
 #' @importFrom vegan decostand
 #' @importFrom vegan envfit
 #' @importFrom vegan rda

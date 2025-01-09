@@ -185,3 +185,21 @@
 #' }
 #' @source Xiang Li
 "df.rda.otu"
+
+#' Test data.
+#'
+#' @format ## `df.permanova.sample`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.permanova.sample"
+
+#' Test data.
+#'
+#' @format ## `df.permanova.otu`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.permanova.otu"

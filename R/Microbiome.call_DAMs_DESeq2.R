@@ -21,7 +21,7 @@ Microbiome.call_DAMs_DESeq2 <- function(data, sample, log2FoldChange = 1, padj =
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},
-    design = ~ group
+    design = ~group
   ) %>%
     DESeq2::DESeq() %>%
     DESeq2::results() %>%
