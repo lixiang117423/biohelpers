@@ -23,6 +23,7 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.RDA.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.call_DAMs_DESeq2.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.call_DAMs_LEfSe.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.permanova.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.top_10.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/RNASeq.call_DEGs_DESeq2.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/RNASeq.enrich_GO.html</loc></url>
@@ -33,6 +34,8 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.call_DAMs_LEfSe.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.pcoa.otu.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.pcoa.sample.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.permanova.otu.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.permanova.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rda.chem.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rda.otu.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.reorder2heatmap.html</loc></url>
