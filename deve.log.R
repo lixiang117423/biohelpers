@@ -52,6 +52,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/CommonlyUsed.anova_and_post_test.R")
 # file.create("R/Microbiome.permanova.R")
 # file.create("R/Metabolome.splsda.R")
+# file.create("R/Metabolome.oplsda.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -136,6 +137,8 @@ usethis::use_import_from("agricolae","duncan.test")
 usethis::use_import_from("stats", "aov")
 usethis::use_import_from("vegan", "adonis")
 usethis::use_import_from("mixOmics", "splsda")
+usethis::use_import_from("ropls", "opls")
+usethis::use_import_from("chemhelper", "get_scores")
 
 123
 

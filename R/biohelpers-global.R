@@ -104,5 +104,10 @@ utils::globalVariables(c(
   "splsda.result.point",
   "splsda.result.prop_expl_var",
   "comp",
-  "prop"
+  "prop",
+
+  # OPLSDA
+  "meta",
+  "VIP",
+  "var"
 ))
