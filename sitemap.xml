@@ -19,6 +19,7 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/CommonlyUsed.lm_and_plot.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/CommonlyUsed.plot_theme.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/CommonlyUsed.reorder2heatmap.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/Metabolome.splsda.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.PCoA.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.RDA.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/Microbiome.call_DAMs_DESeq2.html</loc></url>
@@ -45,6 +46,8 @@
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.kegg.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.plot_volcano.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.rnaseq.sample.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.splsda.meta.html</loc></url>
+<url><loc>https://lixiang117423.github.io/biohelpers/reference/df.splsda.sample.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.class.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.otu.html</loc></url>
 <url><loc>https://lixiang117423.github.io/biohelpers/reference/df.top10.sample.html</loc></url>
