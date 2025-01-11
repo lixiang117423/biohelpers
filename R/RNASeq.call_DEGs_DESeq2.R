@@ -20,11 +20,11 @@
 #'   sample = df.rnaseq.sample
 #' ) -> degs
 #'
-RNASeq.call_DEGs_DESeq2 <- function(data, sample, log2FoldChange = 1, padj = 0.05) {
+RNASeq.call_DEGs_DESeq2 <- function(data, sample,  formula = ~ group, log2FoldChange = 1, padj = 0.05) {
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},
-    design = ~group
+    design = {{ formula }}
   ) %>%
     DESeq2::DESeq() %>%
     DESeq2::results() %>%

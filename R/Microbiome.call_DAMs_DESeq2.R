@@ -17,11 +17,11 @@
 #'
 #' Microbiome.call_DAMs_DESeq2(t(df.pcoa.otu), df.pcoa.sample) -> dems.res
 #'
-Microbiome.call_DAMs_DESeq2 <- function(data, sample, log2FoldChange = 1, padj = 0.05) {
+Microbiome.call_DAMs_DESeq2 <- function(data, sample, formula = ~ group, log2FoldChange = 1, padj = 0.05) {
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},
-    design = ~group
+    design = {{ formula }}
   ) %>%
     DESeq2::DESeq() %>%
     DESeq2::results() %>%
