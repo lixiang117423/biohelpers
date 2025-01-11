@@ -197,3 +197,26 @@
 #   as.data.frame()-> df.permanova.otu
 
 # usethis::use_data(df.permanova.otu, overwrite = TRUE)
+
+# # SPLSDA
+# # 丰度信息
+# readr::read_delim("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/代谢组数据.丰度和样品信息.GCMS数据库.txt") %>% 
+#   dplyr::select(file, Metabolite.name, abundance) %>% 
+#   tidyr::pivot_wider(names_from = Metabolite.name, values_from = abundance) %>% 
+#   dplyr::arrange(file) %>% 
+#   tibble::column_to_rownames(var = "file") -> df.splsda.meta
+
+# usethis::use_data(df.splsda.meta, overwrite = TRUE)
+
+# # 样品信息
+# readr::read_delim("D:/OneDrive/NAS/科研相关/PhData/data/03.生信挖掘/10.松针腐解/data/代谢组数据.丰度和样品信息.GCMS数据库.txt") %>% 
+#   dplyr::select(file, day, treatment) %>% 
+#   dplyr::distinct_all() %>% 
+#   dplyr::mutate(group = paste0(treatment, "_", day)) %>% 
+#   dplyr::arrange(file) %>% 
+#   dplyr::rename(sample = file)-> df.splsda.sample
+
+# usethis::use_data(df.splsda.sample, overwrite = TRUE)
+
+# df.sample$group %>%
+#   as.factor() -> splsda.group

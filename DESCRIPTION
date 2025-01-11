@@ -27,6 +27,7 @@ Imports:
     ggthemes,
     lefser,
     magrittr,
+    mixOmics,
     multcomp,
     purrr,
     rlang,

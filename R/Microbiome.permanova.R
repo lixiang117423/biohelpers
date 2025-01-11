@@ -6,7 +6,7 @@
 #' @param permutations a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix where each row gives the permuted indices.
 #'
 #' @returns A data frame.
-#' 
+#'
 #' @export
 #'
 #' @examples
@@ -17,8 +17,10 @@
 #' data(df.permanova.otu)
 #' data(df.permanova.sample)
 #'
-#' Microbiome.permanova(df.permanova.otu ~ location * variety * group, 
-#'                      df.permanova.sample) -> result.permanova
+#' Microbiome.permanova(
+#'   df.permanova.otu ~ location * variety * group,
+#'   df.permanova.sample
+#' ) -> result.permanova
 #'
 Microbiome.permanova <- function(formula, sample, method = "bray", permutations = 999) {
   vegan::adonis({{ formula }},

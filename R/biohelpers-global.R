@@ -97,5 +97,12 @@ utils::globalVariables(c(
   "value",
   "group",
   "group.anova",
-  "id"
+  "id",
+
+  # SPLSDA
+  "splsda.result",
+  "splsda.result.point",
+  "splsda.result.prop_expl_var",
+  "comp",
+  "prop"
 ))

@@ -203,3 +203,21 @@
 #' }
 #' @source Xiang Li
 "df.permanova.otu"
+
+#' Test data.
+#'
+#' @format ## `df.splsda.meta`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.splsda.meta"
+
+#' Test data.
+#'
+#' @format ## `df.splsda.sample`
+#' A data frame with 9 rows and 2 columns:
+#' \describe{
+#' }
+#' @source Xiang Li
+"df.splsda.sample"

@@ -44,6 +44,7 @@
 #' @importFrom ggthemes theme_foundation
 #' @importFrom lefser lefser
 #' @importFrom magrittr set_names
+#' @importFrom mixOmics splsda
 #' @importFrom multcomp cld
 #' @importFrom multcomp glht
 #' @importFrom multcomp mcp

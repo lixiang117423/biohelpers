@@ -23,12 +23,15 @@ Title
 }
 \examples{
 
-library(tidyverse)
+library(dplyr)
 library(biohelpers)
 
 data(df.permanova.otu)
 data(df.permanova.sample)
 
-Microbiome.permanova(df.permanova.otu ~ location * variety * group, df.permanova.sample) -> result.permanova
+Microbiome.permanova(
+  df.permanova.otu ~ location * variety * group,
+  df.permanova.sample
+) -> result.permanova
 
 }
