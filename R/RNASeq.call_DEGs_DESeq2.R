@@ -2,6 +2,7 @@
 #'
 #' @param data Expression matrix must be integers, with rows representing gene names and columns representing sample names.
 #' @param sample Sample information table, with rows representing sample names.
+#' @param formula A formula or matrix. the formula expresses how the counts for each gene depend on the variables in colData.
 #' @param log2FoldChange The threshold for the absolute value of log2FoldChange is set to 1 by default.
 #' @param padj The threshold for the adjusted p-value is set to 0.05 by default.
 #'
@@ -20,7 +21,7 @@
 #'   sample = df.rnaseq.sample
 #' ) -> degs
 #'
-RNASeq.call_DEGs_DESeq2 <- function(data, sample,  formula = ~ group, log2FoldChange = 1, padj = 0.05) {
+RNASeq.call_DEGs_DESeq2 <- function(data, sample, formula = ~group, log2FoldChange = 1, padj = 0.05) {
   DESeq2::DESeqDataSetFromMatrix(
     countData = {{ data }},
     colData = {{ sample }},

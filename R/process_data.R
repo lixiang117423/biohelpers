@@ -220,3 +220,5 @@
 
 # df.sample$group %>%
 #   as.factor() -> splsda.group
+
+# 抽平

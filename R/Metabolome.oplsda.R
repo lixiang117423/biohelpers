@@ -2,6 +2,7 @@
 #'
 #' @param data Numerical matrix, (observations x variables; NAs are allowed), data.frame, SummarizedExperiment or ExpressionSet object.
 #' @param group A factor (same length as 'x' row number) for (O)PLS-DA
+#' @param VIP Numerical vector of Variable Importance in Projection.
 #'
 #' @returns A list.
 #'

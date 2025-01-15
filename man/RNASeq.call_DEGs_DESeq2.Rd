@@ -4,7 +4,13 @@
 \alias{RNASeq.call_DEGs_DESeq2}
 \title{Identifying Differentially Expressed Genes Using DESeq2}
 \usage{
-RNASeq.call_DEGs_DESeq2(data, sample, log2FoldChange = 1, padj = 0.05)
+RNASeq.call_DEGs_DESeq2(
+  data,
+  sample,
+  formula = ~group,
+  log2FoldChange = 1,
+  padj = 0.05
+)
 }
 \arguments{
 \item{data}{Expression matrix must be integers, with rows representing gene names and columns representing sample names.}

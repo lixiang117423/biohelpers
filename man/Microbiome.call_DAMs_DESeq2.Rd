@@ -4,7 +4,13 @@
 \alias{Microbiome.call_DAMs_DESeq2}
 \title{Title}
 \usage{
-Microbiome.call_DAMs_DESeq2(data, sample, log2FoldChange = 1, padj = 0.05)
+Microbiome.call_DAMs_DESeq2(
+  data,
+  sample,
+  formula = ~group,
+  log2FoldChange = 1,
+  padj = 0.05
+)
 }
 \arguments{
 \item{data}{Expression matrix must be integers, with rows representing gene names and columns representing sample names.}

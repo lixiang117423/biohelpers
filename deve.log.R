@@ -53,6 +53,7 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/Microbiome.permanova.R")
 # file.create("R/Metabolome.splsda.R")
 # file.create("R/Metabolome.oplsda.R")
+# file.create("R/Microbiome.rrarefy.R")
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
