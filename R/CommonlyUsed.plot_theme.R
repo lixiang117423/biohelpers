@@ -4,6 +4,7 @@
 #' @param strip.text.italic Whether the font is italic when displayed in groups.
 #' @param show.minor.tricks.x Whether to display the minor ticks on the X-axis.
 #' @param show.minor.tricks.y Whether to display the minor ticks on the y-axis.
+#' @param show.legend Whether to display the legend.
 #'
 #'
 #' @return A ggplot2 plot theme.
@@ -23,7 +24,7 @@
 #'   geom_point() +
 #'   CommonlyUsed.plot_theme()
 #'
-CommonlyUsed.plot_theme <- function(base.size = 10, strip.text.italic = FALSE, show.minor.tricks.x = FALSE, show.minor.tricks.y = TRUE) {
+CommonlyUsed.plot_theme <- function(base.size = 10, strip.text.italic = FALSE, show.minor.tricks.x = FALSE, show.minor.tricks.y = TRUE, show.legend = TRUE) {
   mytheme <- ggthemes::theme_foundation(
     base_size = base.size
   ) +
@@ -90,6 +91,12 @@ CommonlyUsed.plot_theme <- function(base.size = 10, strip.text.italic = FALSE, s
     mytheme <- mytheme + ggplot2::theme(axis.minor.ticks.length.y = ggplot2::unit(base.size * 0.2, "points"))
   } else {
     mytheme <- mytheme
+  }
+
+  if (show.legend) {
+    mytheme <- mytheme
+  } else {
+    mytheme <- mytheme + ggplot2::theme(legend.position = "none")
   }
 
   return(mytheme)

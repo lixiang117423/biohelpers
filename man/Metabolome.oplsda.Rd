@@ -10,6 +10,8 @@ Metabolome.oplsda(data, group, VIP = 1)
 \item{data}{Numerical matrix, (observations x variables; NAs are allowed), data.frame, SummarizedExperiment or ExpressionSet object.}
 
 \item{group}{A factor (same length as 'x' row number) for (O)PLS-DA}
+
+\item{VIP}{Numerical vector of Variable Importance in Projection.}
 }
 \value{
 A list.

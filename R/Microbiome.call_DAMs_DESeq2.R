@@ -2,7 +2,7 @@
 #'
 #' @param data Expression matrix must be integers, with rows representing gene names and columns representing sample names.
 #' @param sample Sample information table, with rows representing sample names.
-#' @param formula A formula or matrix. the formula expresses how the counts for each gene depend on the variables in colData. 
+#' @param formula A formula or matrix. the formula expresses how the counts for each gene depend on the variables in colData.
 #' @param padj The threshold for the adjusted p-value is set to 0.05 by default.
 #'
 #' @return A data frame from DESeq2.

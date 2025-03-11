@@ -17,7 +17,7 @@ Microbiome.call_DAMs_DESeq2(
 
 \item{sample}{Sample information table, with rows representing sample names.}
 
-\item{log2FoldChange}{The threshold for the absolute value of log2FoldChange is set to 1 by default.}
+\item{formula}{A formula or matrix. the formula expresses how the counts for each gene depend on the variables in colData.}
 
 \item{padj}{The threshold for the adjusted p-value is set to 0.05 by default.}
 }

@@ -8,7 +8,8 @@ CommonlyUsed.plot_theme(
   base.size = 10,
   strip.text.italic = FALSE,
   show.minor.tricks.x = FALSE,
-  show.minor.tricks.y = TRUE
+  show.minor.tricks.y = TRUE,
+  show.legend = TRUE
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ CommonlyUsed.plot_theme(
 \item{show.minor.tricks.x}{Whether to display the minor ticks on the X-axis.}
 
 \item{show.minor.tricks.y}{Whether to display the minor ticks on the y-axis.}
+
+\item{show.legend}{Whether to display the legend.}
 }
 \value{
 A ggplot2 plot theme.
