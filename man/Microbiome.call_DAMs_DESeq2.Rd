@@ -19,6 +19,8 @@ Microbiome.call_DAMs_DESeq2(
 
 \item{formula}{A formula or matrix. the formula expresses how the counts for each gene depend on the variables in colData.}
 
+\item{log2FoldChange}{A The threshold for the log2FoldChange.}
+
 \item{padj}{The threshold for the adjusted p-value is set to 0.05 by default.}
 }
 \value{

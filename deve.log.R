@@ -54,6 +54,8 @@ usethis::use_git_ignore("R/process_data.R")
 # file.create("R/Metabolome.splsda.R")
 # file.create("R/Metabolome.oplsda.R")
 # file.create("R/Microbiome.rrarefy.R")
+# file.create("R/PopGen.manhattan_plot.R")
+
 
 # 修改版本
 usethis::use_version("major") # 第一位数字，当你做了不向后兼容的 API 修改时，增加主版本号。
@@ -140,6 +142,12 @@ usethis::use_import_from("vegan", "adonis")
 usethis::use_import_from("mixOmics", "splsda")
 usethis::use_import_from("ropls", "opls")
 usethis::use_import_from("chemhelper", "get_scores")
+usethis::use_import_from("dplyr", "lag")
+usethis::use_import_from("janitor", "clean_names")
+usethis::use_import_from("normentR", "simulateGWAS")
+usethis::use_import_from("ggtext", "element_markdown")
+usethis::use_import_from("forcats", "as_factor")
+
 
 123
 

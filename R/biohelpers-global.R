@@ -109,5 +109,14 @@ utils::globalVariables(c(
   # OPLSDA
   "meta",
   "VIP",
-  "var"
+  "var",
+
+  # GWAS
+  "df.chr.posi",
+  "df.gwas.new",
+  "chr",
+  "posi",
+  "max_posi",
+  "posi_add",
+  "posi_cum"
 ))
