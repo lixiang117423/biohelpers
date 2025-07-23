@@ -12,3 +12,9 @@
 ^test_function\.R$
 ^\.Rproj\.user$
 ^raw\.data$
+^cran-comments\.md$
+^NEWS\.md$
+^\.travis\.yml$
+^appveyor\.yml$
+^\.lintr$
+^\.codecov\.yml$

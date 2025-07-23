@@ -6,7 +6,7 @@
 \alias{biohelpers-package}
 \title{biohelpers: Convenience Functions for Biological Data Processing}
 \description{
-Convenience Functions for Biological Data Processing.
+This package provides a comprehensive suite of convenience functions for biological data analysis and visualization. It includes tools for multivariate analysis (PCA, PCoA, RDA, sPLS-DA, OPLS-DA), statistical testing (ANOVA with post-hoc tests, correlation analysis, linear regression, PERMANOVA), differential analysis (DESeq2-based differential expression and abundance analysis, LEfSe), data preprocessing (rarefaction, outlier detection, heatmap reordering), genomics visualization (Manhattan plots, volcano plots), microbiome analysis (taxonomic composition, diversity analysis), metabolomics workflows, and publication-ready plotting themes. The package standardizes complex analytical workflows across omics data types and provides consistent, publication-quality visualization outputs with minimal code requirements.
 }
 \seealso{
 Useful links:
