@@ -83,6 +83,7 @@ install.packages(c("ggplot2", "dplyr", "vegan", "mixOmics", "ropls",
 #### 🧮 群体遗传学分析
 - `manhattan_plot()`: 曼哈顿图绘制
 - `admixture_phylo_analysis()`: 群体结构和系统发育分析
+- `plot_LDheatmap`: 绘制LDheatmap
 
 #### 🛠️ 实用工具
 - `df_to_list()`: 数据框转换为列表

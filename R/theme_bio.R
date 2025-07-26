@@ -1,10 +1,10 @@
-#' Professional ggplot2 theme for biological data visualization
+#' Professional ggplot2 theme for biological data visualization with enhanced parameters
 #'
 #' @description
 #' A clean and professional ggplot2 theme specifically designed for biological 
-#' data visualization. This theme provides publication-ready graphics with 
-#' customizable elements for scientific plots including research papers, 
-#' presentations, and reports.
+#' data visualization. This enhanced version provides explicit parameters for 
+#' common theme modifications, enabling autocomplete functionality while 
+#' maintaining all original features.
 #'
 #' @param base_size Numeric value specifying the base font size in points. 
 #'   All other text elements are scaled relative to this size. Default is 10.
@@ -31,30 +31,79 @@
 #' @param axis_line Logical indicating whether to show axis lines. Default 
 #'   is FALSE (uses panel border instead).
 #'
+#' @param legend.position Character string or numeric vector specifying legend 
+#'   position. Options: "none", "left", "right", "bottom", "top", or numeric 
+#'   vector c(x, y). Default is NULL (uses show_legend parameter).
+#' @param plot.title.color Character string specifying plot title color. 
+#'   Default is NULL (uses theme default).
+#' @param plot.title.size Numeric value specifying plot title size as multiple 
+#'   of base_size. Default is NULL (uses 1.3).
+#' @param plot.title.hjust Numeric value (0-1) specifying plot title horizontal 
+#'   justification. Default is NULL (uses 0.5).
+#' @param plot.title.face Character string specifying plot title font face. 
+#'   Options: "plain", "bold", "italic", "bold.italic". Default is NULL (uses "bold").
+#' @param plot.subtitle.size Numeric value specifying subtitle size as multiple 
+#'   of base_size. Default is NULL (uses 1.1).
+#' @param plot.caption.size Numeric value specifying caption size as multiple 
+#'   of base_size. Default is NULL (uses 0.8).
+#'
+#' @param axis.text.x.angle Numeric value specifying X-axis text rotation angle 
+#'   in degrees. Default is NULL (no rotation).
+#' @param axis.text.x.hjust Numeric value (0-1) specifying X-axis text horizontal 
+#'   justification. Default is NULL (auto-adjusted based on angle).
+#' @param axis.text.x.vjust Numeric value (0-1) specifying X-axis text vertical 
+#'   justification. Default is NULL (uses 0.5).
+#' @param axis.text.x.size Numeric value specifying X-axis text size as multiple 
+#'   of base_size. Default is NULL (uses 1.0).
+#' @param axis.text.y.angle Numeric value specifying Y-axis text rotation angle 
+#'   in degrees. Default is NULL (no rotation).
+#' @param axis.text.y.size Numeric value specifying Y-axis text size as multiple 
+#'   of base_size. Default is NULL (uses 1.0).
+#'
+#' @param axis.title.x.face Character string specifying X-axis title font face. 
+#'   Options: "plain", "bold", "italic", "bold.italic". Default is NULL.
+#' @param axis.title.x.size Numeric value specifying X-axis title size as 
+#'   multiple of base_size. Default is NULL (uses 1.1).
+#' @param axis.title.x.color Character string specifying X-axis title color. 
+#'   Default is NULL.
+#' @param axis.title.y.face Character string specifying Y-axis title font face. 
+#'   Options: "plain", "bold", "italic", "bold.italic". Default is NULL.
+#' @param axis.title.y.size Numeric value specifying Y-axis title size as 
+#'   multiple of base_size. Default is NULL (uses 1.1).
+#' @param axis.title.y.color Character string specifying Y-axis title color. 
+#'   Default is NULL.
+#'
+#' @param panel.grid.major.x Grid lines for X-axis. Use element_line() or 
+#'   element_blank(). Default is NULL.
+#' @param panel.grid.major.y Grid lines for Y-axis. Use element_line() or 
+#'   element_blank(). Default is NULL.
+#' @param panel.grid.minor.x Minor grid lines for X-axis. Use element_line() or 
+#'   element_blank(). Default is NULL.
+#' @param panel.grid.minor.y Minor grid lines for Y-axis. Use element_line() or 
+#'   element_blank(). Default is NULL.
+#'
+#' @param strip.text.face Character string specifying strip text font face. 
+#'   Options: "plain", "bold", "italic", "bold.italic". Default is NULL.
+#' @param strip.text.size Numeric value specifying strip text size as multiple 
+#'   of base_size. Default is NULL (uses 1.0).
+#' @param strip.text.color Character string specifying strip text color. 
+#'   Default is NULL (uses "black").
+#' @param strip.background.fill Character string specifying strip background 
+#'   fill color. Default is NULL (uses strip_background_color parameter).
+#' @param strip.background.color Character string specifying strip background 
+#'   border color. Default is NULL.
+#'
+#' @param legend.text.size Numeric value specifying legend text size as multiple 
+#'   of base_size. Default is NULL (uses 1.0).
+#' @param legend.title.size Numeric value specifying legend title size as 
+#'   multiple of base_size. Default is NULL (uses 1.0).
+#' @param legend.title.face Character string specifying legend title font face. 
+#'   Options: "plain", "bold", "italic", "bold.italic". Default is NULL.
+#'
+#' @param ... Additional theme arguments passed to \code{ggplot2::theme()}. 
+#'   These won't have autocomplete but provide full flexibility.
+#'
 #' @return A ggplot2 theme object that can be added to any ggplot.
-#'
-#' @details
-#' This theme provides:
-#' \itemize{
-#'   \item Clean, publication-ready appearance
-#'   \item Proper font sizing and spacing for readability
-#'   \item Professional panel borders and backgrounds
-#'   \item Customizable minor ticks for precise data reading
-#'   \item Flexible legend and strip text formatting
-#'   \item Optimized margins and spacing for various plot types
-#' }
-#'
-#' The theme is built on \code{ggthemes::theme_foundation()} and extends it 
-#' with biology-specific design choices. It follows the principle of maximizing 
-#' the data-ink ratio while maintaining visual clarity.
-#'
-#' @note
-#' \itemize{
-#'   \item This theme works best with a white or light background
-#'   \item For presentations, consider increasing base_size to 12-14
-#'   \item For publications, base_size of 8-10 typically works well
-#'   \item Minor ticks are useful for precise quantitative plots
-#' }
 #'
 #' @export
 #'
@@ -63,73 +112,16 @@
 #' library(ggplot2)
 #' library(biohelpers)
 #'
-#' # Load example data
-#' data(iris)
-#'
-#' # Basic scatter plot with bio theme
-#' iris %>%
-#'   ggplot(aes(Sepal.Length, Sepal.Width, color = Species)) +
-#'   geom_point(size = 2, alpha = 0.8) +
-#'   labs(
-#'     x = "Sepal Length (cm)",
-#'     y = "Sepal Width (cm)", 
-#'     title = "Iris Sepal Measurements"
-#'   ) +
-#'   theme_bio()
-#'
-#' # Customized theme for presentations
+#' # Basic usage with enhanced parameters (autocomplete supported)
 #' iris %>%
 #'   ggplot(aes(Species, Sepal.Length, fill = Species)) +
-#'   geom_boxplot(alpha = 0.7) +
-#'   stat_summary(fun = mean, geom = "point", shape = 23, size = 3) +
-#'   labs(
-#'     x = "Species",
-#'     y = "Sepal Length (cm)",
-#'     title = "Sepal Length by Species"
-#'   ) +
+#'   geom_boxplot() +
 #'   theme_bio(
 #'     base_size = 12,
-#'     show_legend = FALSE,
-#'     show_minor_ticks_y = TRUE
-#'   )
-#'
-#' # Faceted plot with italic strip text
-#' iris %>%
-#'   tidyr::pivot_longer(
-#'     cols = c(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width),
-#'     names_to = "measurement",
-#'     values_to = "value"
-#'   ) %>%
-#'   ggplot(aes(Species, value, fill = Species)) +
-#'   geom_boxplot(alpha = 0.7) +
-#'   facet_wrap(~measurement, scales = "free_y") +
-#'   labs(
-#'     x = "Species",
-#'     y = "Measurement (cm)",
-#'     title = "Iris Morphological Measurements"
-#'   ) +
-#'   theme_bio(
-#'     strip_text_italic = TRUE,
-#'     show_legend = FALSE
-#'   )
-#'
-#' # Time series plot with minor ticks
-#' data.frame(
-#'   time = 1:24,
-#'   expression = sin(1:24 * pi/6) + rnorm(24, 0, 0.1) + 2,
-#'   gene = "Gene A"
-#' ) %>%
-#'   ggplot(aes(time, expression)) +
-#'   geom_line(linewidth = 1, color = "steelblue") +
-#'   geom_point(size = 2, color = "steelblue") +
-#'   labs(
-#'     x = "Time (hours)",
-#'     y = "Expression Level",
-#'     title = "Gene Expression Over Time"
-#'   ) +
-#'   theme_bio(
-#'     show_minor_ticks_x = TRUE,
-#'     show_minor_ticks_y = TRUE
+#'     legend.position = "none",
+#'     plot.title.color = "navy",
+#'     axis.text.x.angle = 45,
+#'     axis.title.x.face = "bold"
 #'   )
 #'
 theme_bio <- function(base_size = 10,
@@ -143,7 +135,53 @@ theme_bio <- function(base_size = 10,
                       panel_border_size = 0.8,
                       strip_background_color = "#f0f0f0",
                       grid_lines = FALSE,
-                      axis_line = FALSE) {
+                      axis_line = FALSE,
+                      
+                      # Legend parameters
+                      legend.position = NULL,
+                      legend.text.size = NULL,
+                      legend.title.size = NULL,
+                      legend.title.face = NULL,
+                      
+                      # Plot title and labels
+                      plot.title.color = NULL,
+                      plot.title.size = NULL,
+                      plot.title.hjust = NULL,
+                      plot.title.face = NULL,
+                      plot.subtitle.size = NULL,
+                      plot.caption.size = NULL,
+                      
+                      # Axis text parameters
+                      axis.text.x.angle = NULL,
+                      axis.text.x.hjust = NULL,
+                      axis.text.x.vjust = NULL,
+                      axis.text.x.size = NULL,
+                      axis.text.y.angle = NULL,
+                      axis.text.y.size = NULL,
+                      
+                      # Axis title parameters
+                      axis.title.x.face = NULL,
+                      axis.title.x.size = NULL,
+                      axis.title.x.color = NULL,
+                      axis.title.y.face = NULL,
+                      axis.title.y.size = NULL,
+                      axis.title.y.color = NULL,
+                      
+                      # Panel grid parameters
+                      panel.grid.major.x = NULL,
+                      panel.grid.major.y = NULL,
+                      panel.grid.minor.x = NULL,
+                      panel.grid.minor.y = NULL,
+                      
+                      # Strip parameters
+                      strip.text.face = NULL,
+                      strip.text.size = NULL,
+                      strip.text.color = NULL,
+                      strip.background.fill = NULL,
+                      strip.background.color = NULL,
+                      
+                      # Additional parameters
+                      ...) {
   
   # Input validation
   if (!is.numeric(base_size) || base_size <= 0) {
@@ -298,9 +336,165 @@ theme_bio <- function(base_size = 10,
     )
   }
   
-  # Handle legend display
-  if (!show_legend) {
-    bio_theme <- bio_theme + ggplot2::theme(legend.position = "none")
+  # Handle legend display (backward compatibility)
+  if (!show_legend && is.null(legend.position)) {
+    legend.position <- "none"
+  }
+  
+  # Build list of additional theme modifications
+  additional_theme_args <- list()
+  
+  # Legend parameters
+  if (!is.null(legend.position)) {
+    additional_theme_args$legend.position <- legend.position
+  }
+  
+  if (!is.null(legend.text.size)) {
+    additional_theme_args$legend.text <- ggplot2::element_text(size = ggplot2::rel(legend.text.size))
+  }
+  
+  if (!is.null(legend.title.size) || !is.null(legend.title.face)) {
+    additional_theme_args$legend.title <- ggplot2::element_text(
+      size = if (!is.null(legend.title.size)) ggplot2::rel(legend.title.size) else ggplot2::rel(1.0),
+      face = if (!is.null(legend.title.face)) legend.title.face else "plain",
+      hjust = 0
+    )
+  }
+  
+  # Plot title parameters
+  title_args <- list()
+  if (!is.null(plot.title.color)) title_args$colour <- plot.title.color
+  if (!is.null(plot.title.size)) title_args$size <- ggplot2::rel(plot.title.size)
+  if (!is.null(plot.title.hjust)) title_args$hjust <- plot.title.hjust
+  if (!is.null(plot.title.face)) title_args$face <- plot.title.face
+  
+  if (length(title_args) > 0) {
+    # Keep defaults for unspecified parameters
+    if (is.null(title_args$size)) title_args$size <- ggplot2::rel(1.3)
+    if (is.null(title_args$hjust)) title_args$hjust <- 0.5
+    if (is.null(title_args$face)) title_args$face <- "bold"
+    title_args$vjust <- 1.5
+    
+    additional_theme_args$plot.title <- do.call(ggplot2::element_text, title_args)
+  }
+  
+  if (!is.null(plot.subtitle.size)) {
+    additional_theme_args$plot.subtitle <- ggplot2::element_text(
+      size = ggplot2::rel(plot.subtitle.size),
+      hjust = 0.5
+    )
+  }
+  
+  if (!is.null(plot.caption.size)) {
+    additional_theme_args$plot.caption <- ggplot2::element_text(
+      size = ggplot2::rel(plot.caption.size),
+      hjust = 1
+    )
+  }
+  
+  # Axis text parameters
+  if (!is.null(axis.text.x.angle) || !is.null(axis.text.x.hjust) || 
+      !is.null(axis.text.x.vjust) || !is.null(axis.text.x.size)) {
+    
+    x_text_args <- list()
+    if (!is.null(axis.text.x.angle)) x_text_args$angle <- axis.text.x.angle
+    if (!is.null(axis.text.x.size)) x_text_args$size <- ggplot2::rel(axis.text.x.size)
+    
+    # Auto-adjust hjust based on angle if not specified
+    if (!is.null(axis.text.x.hjust)) {
+      x_text_args$hjust <- axis.text.x.hjust
+    } else if (!is.null(axis.text.x.angle) && axis.text.x.angle != 0) {
+      x_text_args$hjust <- 1
+    }
+    
+    if (!is.null(axis.text.x.vjust)) {
+      x_text_args$vjust <- axis.text.x.vjust
+    } else {
+      x_text_args$vjust <- 0
+    }
+    
+    x_text_args$margin <- ggplot2::margin(t = base_size * 0.1, unit = "pt")
+    additional_theme_args$axis.text.x <- do.call(ggplot2::element_text, x_text_args)
+  }
+  
+  if (!is.null(axis.text.y.angle) || !is.null(axis.text.y.size)) {
+    y_text_args <- list()
+    if (!is.null(axis.text.y.angle)) y_text_args$angle <- axis.text.y.angle
+    if (!is.null(axis.text.y.size)) y_text_args$size <- ggplot2::rel(axis.text.y.size)
+    
+    y_text_args$hjust <- 0.5
+    y_text_args$margin <- ggplot2::margin(r = base_size * 0.1, unit = "pt")
+    additional_theme_args$axis.text.y <- do.call(ggplot2::element_text, y_text_args)
+  }
+  
+  # Axis title parameters
+  if (!is.null(axis.title.x.face) || !is.null(axis.title.x.size) || !is.null(axis.title.x.color)) {
+    x_title_args <- list()
+    if (!is.null(axis.title.x.face)) x_title_args$face <- axis.title.x.face
+    if (!is.null(axis.title.x.size)) x_title_args$size <- ggplot2::rel(axis.title.x.size)
+    if (!is.null(axis.title.x.color)) x_title_args$colour <- axis.title.x.color
+    
+    x_title_args$margin <- ggplot2::margin(t = base_size * 1, unit = "pt")
+    additional_theme_args$axis.title.x <- do.call(ggplot2::element_text, x_title_args)
+  }
+  
+  if (!is.null(axis.title.y.face) || !is.null(axis.title.y.size) || !is.null(axis.title.y.color)) {
+    y_title_args <- list()
+    if (!is.null(axis.title.y.face)) y_title_args$face <- axis.title.y.face
+    if (!is.null(axis.title.y.size)) y_title_args$size <- ggplot2::rel(axis.title.y.size)
+    if (!is.null(axis.title.y.color)) y_title_args$colour <- axis.title.y.color
+    
+    y_title_args$angle <- 90
+    y_title_args$margin <- ggplot2::margin(r = base_size * 1, unit = "pt")
+    additional_theme_args$axis.title.y <- do.call(ggplot2::element_text, y_title_args)
+  }
+  
+  # Panel grid parameters
+  if (!is.null(panel.grid.major.x)) {
+    additional_theme_args$panel.grid.major.x <- panel.grid.major.x
+  }
+  
+  if (!is.null(panel.grid.major.y)) {
+    additional_theme_args$panel.grid.major.y <- panel.grid.major.y
+  }
+  
+  if (!is.null(panel.grid.minor.x)) {
+    additional_theme_args$panel.grid.minor.x <- panel.grid.minor.x
+  }
+  
+  if (!is.null(panel.grid.minor.y)) {
+    additional_theme_args$panel.grid.minor.y <- panel.grid.minor.y
+  }
+  
+  # Strip parameters
+  if (!is.null(strip.text.face) || !is.null(strip.text.size) || !is.null(strip.text.color)) {
+    strip_text_args <- list()
+    if (!is.null(strip.text.color)) strip_text_args$color <- strip.text.color
+    if (!is.null(strip.text.size)) strip_text_args$size <- ggplot2::rel(strip.text.size)
+    if (!is.null(strip.text.face)) strip_text_args$face <- strip.text.face
+    
+    strip_text_args$angle <- 0
+    additional_theme_args$strip.text.x <- do.call(ggplot2::element_text, strip_text_args)
+  }
+  
+  if (!is.null(strip.background.fill) || !is.null(strip.background.color)) {
+    strip_bg_args <- list()
+    if (!is.null(strip.background.fill)) strip_bg_args$fill <- strip.background.fill
+    if (!is.null(strip.background.color)) strip_bg_args$colour <- strip.background.color
+    
+    strip_bg_args$linewidth <- ggplot2::rel(1.0)
+    additional_theme_args$strip.background <- do.call(ggplot2::element_rect, strip_bg_args)
+  }
+  
+  # Apply additional theme arguments
+  if (length(additional_theme_args) > 0) {
+    bio_theme <- bio_theme + do.call(ggplot2::theme, additional_theme_args)
+  }
+  
+  # Handle ... parameters (for full flexibility)
+  dots_args <- list(...)
+  if (length(dots_args) > 0) {
+    bio_theme <- bio_theme + do.call(ggplot2::theme, dots_args)
   }
   
   return(bio_theme)
